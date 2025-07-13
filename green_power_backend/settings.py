@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env into the system's environment variables
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*pio7ki#ztjrwc6pe%z58um9=f%-67rt11=bi8a2c@o$d_p1t='
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', []).split(',')
 
 
 # Application definition
@@ -72,12 +77,35 @@ WSGI_APPLICATION = 'green_power_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB_NAME', 'postgres'),
+        'USER': os.getenv('POSTGRES_DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('POSTGRES_DB_PASSWORD', 'postgres'),
+        'HOST': os.getenv('POSTGRES_DB_HOST', 'localhost'),
+        'PORT': os.getenv('POSTGRES_DB_PORT', '5432'),
     }
 }
+
+# MongoDB configuration
+MONGO_DB_HOST = os.getenv('MONGO_DB_HOST', 'localhost')
+MONGO_DB_PORT = os.getenv('MONGO_DB_PORT', '27017')
+MONGO_DB_NAME = os.getenv('MONGO_DB_NAME', 'test')
+MONGO_DB_USER = os.getenv("MONGO_DB_USER")
+MONGO_DB_PASSWORD = os.getenv("MONGO_DB_PASSWORD")
+
+if MONGO_DB_USER and MONGO_DB_PASSWORD:
+    MONGO_DB_URI = f"mongodb://{MONGO_DB_USER}:{MONGO_DB_PASSWORD}@{MONGO_DB_HOST}:{MONGO_DB_PORT}/?authSource=admin"
+else:
+    MONGO_DB_URI = f"mongodb://{MONGO_DB_HOST}:{MONGO_DB_PORT}"
 
 
 # Password validation
