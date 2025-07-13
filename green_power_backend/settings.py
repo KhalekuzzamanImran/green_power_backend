@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+import logging
 
 # Load environment variables from .env into the system's environment variables
 load_dotenv()
@@ -142,9 +143,111 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/'  # URL to access static files
+
+STATICFILES_DIRS = [
+    BASE_DIR / "assets"  # Where your custom static files (for dev) live
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Logger configuration
+LOG_DIR = BASE_DIR / 'logs'
+LOG_DIR.mkdir(exist_ok=True)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    # --- Filters ---
+    'filters': {
+        'only_info': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: record.levelno == logging.INFO,
+        },
+        'only_warning_and_above': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: record.levelno >= logging.WARNING,
+        },
+    },
+
+    # --- Formatters ---
+    'formatters': {
+        'standard': {
+            'format': '[{asctime}] {levelname} {name} - {message}',
+            'style': '{',
+        },
+    },
+
+    # --- Handlers ---
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'DEBUG',
+            'formatter': 'standard',
+        },
+        'info_file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOG_DIR / 'info.log',
+            'maxBytes': 10 * 1024 * 1024,  # 10 MB
+            'backupCount': 10,
+            'level': 'INFO',
+            'filters': ['only_info'],
+            'formatter': 'standard',
+            'encoding': 'utf8',
+        },
+        'error_file': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': LOG_DIR / 'errors.log',
+            'when': 'midnight',
+            'backupCount': 10,
+            'level': 'WARNING',
+            'filters': ['only_warning_and_above'],
+            'formatter': 'standard',
+            'encoding': 'utf8',
+        },
+    },
+
+    # --- Loggers ---
+    'loggers': {
+        # Django internal logs
+        'django': {
+            'handlers': ['console', 'info_file', 'error_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.request': {
+            'handlers': ['error_file'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.server': {
+            'handlers': ['console', 'info_file', 'error_file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.db.backends': {
+            'handlers': ['error_file'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+
+        # App logs
+        'green_power_backend': {
+            'handlers': ['console', 'info_file', 'error_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+
+        # Catch-all fallback
+        '': {
+            'handlers': ['console', 'info_file', 'error_file'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+    },
+}
+
