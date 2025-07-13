@@ -1,5 +1,8 @@
 from pymongo import MongoClient, errors
 from django.conf import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 class MongoDBClient:
     _client = None
@@ -21,12 +24,12 @@ class MongoDBClient:
             cls._client.admin.command('ping')  # Test connection
             cls._db = cls._client[db_name]
 
-            print(f"[MongoDB] Connected to database: {db_name}")
+            logger.info(f"[MongoDB] Connected to database: {db_name}")
             return cls._db
         except (errors.ConnectionFailure, errors.ServerSelectionTimeoutError) as e:
-            print(f"[MongoDB] Connection failed: {e}")
+            logger.critical(f"[MongoDB] Connection failed: {e}")
         except Exception as e:
-            print(f"[MongoDB] Unexpected error during connection: {e}")
+            logger.critical(f"[MongoDB] Unexpected error during connection: {e}")
 
         cls._client = None
         cls._db = None
@@ -38,7 +41,7 @@ class MongoDBClient:
     
     @classmethod
     def reconnect(cls):
-        print("[MongoDB] Attempting reconnection...")
+        logger.info("[MongoDB] Attempting reconnection...")
         cls._client = None
         cls._db = None
         return cls.connect()
