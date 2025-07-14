@@ -164,7 +164,6 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
 
-    # --- Filters ---
     'filters': {
         'only_info': {
             '()': 'django.utils.log.CallbackFilter',
@@ -176,7 +175,6 @@ LOGGING = {
         },
     },
 
-    # --- Formatters ---
     'formatters': {
         'standard': {
             'format': '[{asctime}] {levelname} {name} - {message}',
@@ -184,7 +182,6 @@ LOGGING = {
         },
     },
 
-    # --- Handlers ---
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
@@ -211,11 +208,20 @@ LOGGING = {
             'formatter': 'standard',
             'encoding': 'utf8',
         },
+        'subscriber_error_file': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': LOG_DIR / 'subscriber_errors.log',
+            'when': 'midnight',
+            'backupCount': 7,
+            'level': 'WARNING',
+            'filters': ['only_warning_and_above'],
+            'formatter': 'standard',
+            'encoding': 'utf8',
+        },
     },
 
-    # --- Loggers ---
     'loggers': {
-        # Django internal logs
+        # Django core
         'django': {
             'handlers': ['console', 'info_file', 'error_file'],
             'level': 'INFO',
@@ -237,14 +243,19 @@ LOGGING = {
             'propagate': False,
         },
 
-        # App logs
+        # Project app-level loggers
         'green_power_backend': {
             'handlers': ['console', 'info_file', 'error_file'],
             'level': 'DEBUG',
             'propagate': False,
         },
+        'subscriber': {
+            'handlers': ['console', 'subscriber_error_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
 
-        # Catch-all fallback
+        # Catch-all
         '': {
             'handlers': ['console', 'info_file', 'error_file'],
             'level': 'WARNING',
@@ -252,4 +263,5 @@ LOGGING = {
         },
     },
 }
+
 
