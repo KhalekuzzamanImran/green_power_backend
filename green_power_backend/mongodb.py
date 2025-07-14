@@ -37,7 +37,9 @@ class MongoDBClient:
     
     @classmethod
     def get_db(cls):
-        return cls._db or cls.connect()
+        if cls._db is None:
+            cls.connect()
+        return cls._db
     
     @classmethod
     def reconnect(cls):

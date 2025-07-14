@@ -4,14 +4,34 @@ import json
 import logging
 import time
 import signal
+import threading
+import django
 from pathlib import Path
-from typing import List
+from typing import List, Dict, Any
 from dotenv import load_dotenv
 from paho.mqtt import client as mqtt_client
 from queue import Queue, Full, Empty
+from datetime import datetime, timezone
+from pydantic import ValidationError
 
 # ─────── Load Environment Variables ───────
 load_dotenv()
+
+# ─────── Django Setup ───────
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.append(str(BASE_DIR))
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'green_power_backend.settings')
+
+try:
+    django.setup()
+except Exception:
+    logging.exception("Failed to set up Django")
+    sys.exit(1)
+
+from green_power_backend.mongodb import MongoDBClient
+from grid.models import RTDataModel, ENYNowDataModel
+from generator.models import GeneratorDataModel
+from environment.models import EnvironmentData
 
 # ─────── Constants ───────
 DEFAULT_RECONNECT_DELAY = 1
@@ -19,13 +39,16 @@ MAX_RECONNECT_DELAY = 60
 QUEUE_TIMEOUT = 1
 QUEUE_MAX_SIZE = 1000
 
-# ─────── Django Setup ───────
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.append(str(BASE_DIR))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'green_power_backend.settings')
+TOPIC_MAPPING = {
+    "MQTT_RT_DATA": (RTDataModel, "grid_rt_data"),
+    "MQTT_ENY_NOW": (ENYNowDataModel, "grid_eny_now"),
+}
 
-import django
-django.setup()
+ENV_TOPIC = "CCCL/PURBACHAL/ENV_01"
+GEN_TOPIC = "CCCL/PURBACHAL/ENM_01"
+GEN_COLLECTION = "generator_data"
+ENV_COLLECTION = "environment_data"
+REALTIME_GROUP = "realtime_updates"
 
 # ─────── log Setup ───────
 log = logging.getLogger('subscriber')
@@ -80,6 +103,8 @@ class MQTTSubscriber:
         self.should_reconnect = True
         self.reconnect_delay = DEFAULT_RECONNECT_DELAY
         self.message_queue = Queue(maxsize=QUEUE_MAX_SIZE)
+        self.session_data: Dict[str, Dict[str, Any]] = {}
+        self.mongodb = MongoDBClient().get_db()
 
     def _init_mqtt_client(self) -> mqtt_client.Client:
         client = mqtt_client.Client(
@@ -122,7 +147,7 @@ class MQTTSubscriber:
         try:
             payload = json.loads(msg.payload.decode())
             log.info(f"Received message on topic '{msg.topic}': {payload}")
-            self.message_queue.put_nowait(payload)
+            self.message_queue.put_nowait((msg.topic, payload))
         except json.JSONDecodeError:
             log.error(f"Invalid JSON in message from topic '{msg.topic}'")
         except Full:
@@ -141,10 +166,99 @@ class MQTTSubscriber:
                 log.error(f"Reconnect failed: {e}")
             self.reconnect_delay = min(self.reconnect_delay * 2, MAX_RECONNECT_DELAY)
 
+    # ─────── Message Handling ───────
+    def _handle_env_data(self, topic: str, payload: Dict[str, Any]):
+        payload['timestamp'] = datetime.now(timezone.utc)
+        
+        try:
+            validated = EnvironmentData(**payload)
+            self.mongo_db[ENV_COLLECTION].insert_one(payload.copy())
+            self._send_realtime_update(topic, validated.model_dump(mode="json"))  # Only pushed if insert succeeds
+            log.info(f"{topic} inserted into MongoDB")
+        except Exception as e:
+            log.error(f"{topic} insert or validation failed: {e}")
+
+    def _handle_generator_data(self, topic: str, payload: Dict[str, Any]):
+        session = self.session_data.setdefault(topic, {})
+        
+        try:
+            data_point = payload.get("data", [{}])[0]
+            if not data_point:
+                return
+
+            timestamp = data_point.get("tp")
+            points = {str(p["id"]): p["val"] for p in data_point.get("point", [])}
+            doc = {"timestamp": timestamp, **points}
+
+            if session.get("timestamp") == timestamp:
+                session.update(doc)
+                session["device_id"] = session.pop("0", None)
+
+                data_to_insert = session.copy()
+
+                try:
+                    GeneratorDataModel.from_flat_dict(data_to_insert)
+                except ValidationError as ve:
+                    log.error(f"Validation error for topic {topic}: {ve}")
+                    session.clear()
+                    return
+
+                self.mongodb[GEN_COLLECTION].insert_one(data_to_insert)
+                log.info(f"{topic} inserted into MongoDB.")
+                session.clear()
+            else:
+                session.update(doc)
+
+        except Exception as e:
+            log.error(f"{topic} insert or processing error: {e}")
+            session.clear()
+
+
+    def _handle_grid_data(self, topic: str, payload: Dict[str, Any]):
+        model_class, collection = TOPIC_MAPPING[topic]
+        session = self.session_data.setdefault(topic, {})
+        session.update(payload)
+
+        if payload.get('isend') == '1':
+            try:
+                session['device_id'] = session.pop('id')
+                session['timestamp'] = datetime.now(timezone.utc)
+                validated = model_class(**session)
+                self.mongodb[collection].insert_one(session.copy())
+                log.info(f"{topic} inserted into MongoDB.")
+            except ValidationError as ve:
+                log.error(f"{topic} validation failed: {ve}")
+            except Exception as e:
+                log.error(f"{topic} insert failed: {e}")
+            finally:
+                session.clear()
+
+    def _handle_message(self, topic: str, payload: Dict[str, Any]):
+        if topic in TOPIC_MAPPING:
+            self._handle_grid_data(topic, payload)
+        elif topic == ENV_TOPIC:
+            self._handle_env_data(topic, payload)
+        elif topic == GEN_TOPIC:
+            self._handle_generator_data(topic, payload)
+        else:
+            log.warning(f"Unhandled topic: {topic}")
+
+    def _process_queue(self):
+        while True:
+            try:
+                topic, payload = self.message_queue.get(timeout=QUEUE_TIMEOUT)
+                self._handle_message(topic, payload)
+            except Empty:
+                continue
+            except Exception as e:
+                log.error(f"Queue processing error: {e}")
+
+
     def connect(self):
         try:
             self.client.connect_async(self.config.broker, self.config.port, self.config.keepalive)
             self.client.loop_start()
+            threading.Thread(target=self._process_queue, daemon=True).start()
             log.info("MQTT Subscriber started.")
         except Exception as e:
             log.exception("Initial connection failed.")

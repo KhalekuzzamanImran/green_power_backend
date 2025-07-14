@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'grid.apps.GridConfig',
+    'generator',
+    'environment'
 ]
 
 MIDDLEWARE = [

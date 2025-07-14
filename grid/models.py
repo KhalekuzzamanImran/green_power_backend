@@ -1,3 +1,110 @@
-from django.db import models
+from pydantic import BaseModel, Field
+from datetime import datetime
 
-# Create your models here.
+class RTDataModel(BaseModel):
+    device_id: str
+    timestamp: datetime
+    ua: float
+    ub: float
+    uc: float
+    ia: float
+    ib: float
+    ic: float
+    time: str
+    isend: str
+    uab: float
+    ubc: float
+    uca: float
+    pa: float
+    pb: float
+    pc: float
+    zyggl: float
+    qa: float
+    qb: float
+    qc: float
+    zwggl: float
+    sa: float
+    sb: float
+    sc: float
+    zszgl: float
+    pfa: float
+    pfb: float
+    pfc: float
+    zglys: float
+    f: float
+    u0: float
+    u_plus: float = Field(..., alias="u+")
+    u_minus: float = Field(..., alias="u-")
+    i0: float
+    i_plus: float = Field(..., alias="i+")
+    i_minus: float = Field(..., alias="i-")
+    uxja: float
+    uxjb: float
+    uxjc: float
+    ixja: float
+    ixjb: float
+    ixjc: float
+    unb: float
+    inb: float
+    pdm: float
+    qdm: float
+    sdm: float
+
+class ENYNowDataModel(BaseModel):
+    device_id: str
+    zygsz: float
+    fygsz: float
+    zwgsz: float
+    fwgsz: float
+    zyjsz: float
+    fyjsz: float
+    time: str
+    isend: str
+    zyfsz: float
+    fyfsz: float
+    zypsz: float
+    fypsz: float
+    zyvsz: float
+    fyvsz: float
+    zydvsz: float
+    fydvsz: float
+    zy6sz: float
+    fy6sz: float
+    dmpmax: float
+    dmpmaxoct: int
+    dmsmax: float
+    dmsmaxoct: int
+    uathd: float
+    ubthd: float
+    ucthd: float
+    iathd: float
+    ibthd: float
+    icthd: float
+    uaxbl3: float
+    ubxbl3: float
+    ucxbl3: float
+    iaxbl3: float
+    ibxbl3: float
+    icxbl3: float
+    uaxbl5: float
+    ubxbl5: float
+    ucxbl5: float
+    iaxbl5: float
+    ibxbl5: float
+    icxbl5: float
+    uaxbl7: float
+    ubxbl7: float
+    ucxbl7: float
+    iaxbl7: float
+    ibxbl7: float
+    icxbl7: float
+    iaxb3: float
+    ibxb3: float
+    icxb3: float
+    iaxb5: float
+    ibxb5: float
+    icxb5: float
+    iaxb7: float
+    ibxb7: float
+    icxb7: float
+
