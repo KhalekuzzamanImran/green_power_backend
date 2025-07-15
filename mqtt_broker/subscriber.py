@@ -13,6 +13,8 @@ from paho.mqtt import client as mqtt_client
 from queue import Queue, Full, Empty
 from datetime import datetime, timezone
 from pydantic import ValidationError
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
 
 # ─────── Load Environment Variables ───────
 load_dotenv()
@@ -105,6 +107,7 @@ class MQTTSubscriber:
         self.message_queue = Queue(maxsize=QUEUE_MAX_SIZE)
         self.session_data: Dict[str, Dict[str, Any]] = {}
         self.mongodb = MongoDBClient().get_db()
+        self.channel_layer = get_channel_layer()
 
     def _init_mqtt_client(self) -> mqtt_client.Client:
         client = mqtt_client.Client(
@@ -136,7 +139,7 @@ class MQTTSubscriber:
         else:
             log.error(f"Failed to connect to MQTT broker (code: {reason_code})")
 
-    def _on_disconnect(self, client, userdata, reason_code, properties=None):
+    def _on_disconnect(self, client, userdata, disconnect_flags, reason_code, properties=None):
         self.connected = False
         log.warning(f"Disconnected from MQTT broker (code: {reason_code})")
 
@@ -166,15 +169,30 @@ class MQTTSubscriber:
                 log.error(f"Reconnect failed: {e}")
             self.reconnect_delay = min(self.reconnect_delay * 2, MAX_RECONNECT_DELAY)
 
+    def _send_realtime_data(self, topic: str, data: Dict[str, Any]) -> None:
+        try:
+            async_to_sync(self.channel_layer.group_send)(
+                REALTIME_GROUP,
+                {
+                    'type': 'send.update',
+                    'data': {
+                        'topic': topic,
+                        'payload': data,
+                    }
+                }
+            )
+        except Exception as e:
+            log.error(f"WebSocket push failed: {e}")
+
     # ─────── Message Handling ───────
     def _handle_env_data(self, topic: str, payload: Dict[str, Any]):
         payload['timestamp'] = datetime.now(timezone.utc)
         
         try:
             validated = EnvironmentData(**payload)
-            self.mongo_db[ENV_COLLECTION].insert_one(payload.copy())
-            self._send_realtime_update(topic, validated.model_dump(mode="json"))  # Only pushed if insert succeeds
+            self.mongodb[ENV_COLLECTION].insert_one(payload.copy())
             log.info(f"{topic} inserted into MongoDB")
+            self._send_realtime_data(topic, validated.model_dump(mode="json"))  # Only pushed if insert succeeds
         except Exception as e:
             log.error(f"{topic} insert or validation failed: {e}")
 
@@ -197,7 +215,7 @@ class MQTTSubscriber:
                 data_to_insert = session.copy()
 
                 try:
-                    GeneratorDataModel.from_flat_dict(data_to_insert)
+                    validated = GeneratorDataModel.from_flat_dict(data_to_insert)
                 except ValidationError as ve:
                     log.error(f"Validation error for topic {topic}: {ve}")
                     session.clear()
@@ -205,6 +223,7 @@ class MQTTSubscriber:
 
                 self.mongodb[GEN_COLLECTION].insert_one(data_to_insert)
                 log.info(f"{topic} inserted into MongoDB.")
+                self._send_realtime_data(topic, validated.model_dump(mode='json'))
                 session.clear()
             else:
                 session.update(doc)
@@ -226,6 +245,7 @@ class MQTTSubscriber:
                 validated = model_class(**session)
                 self.mongodb[collection].insert_one(session.copy())
                 log.info(f"{topic} inserted into MongoDB.")
+                self._send_realtime_data(topic, validated.model_dump(mode='json'))
             except ValidationError as ve:
                 log.error(f"{topic} validation failed: {ve}")
             except Exception as e:

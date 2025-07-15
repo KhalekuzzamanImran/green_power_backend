@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to Green Power!</h1>
+    <p>Live Temperature: <span id="temperature">Waiting for data!</span></p>
+
+    <script>
+      console.log("Connecting to WebSocket...");
+      const ws_scheme = window.location.protocol === "https" ? "wss" : "ws";
+
+      const ws = new WebSocket(
+        `${ws_scheme}://${window.location.host}/ws/realtime/`
+      );
+      ws.onopen = () => console.log("WebSocket connection established.");
+
+      ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        console.log("Received data:", data);
+
+        if (data.topic && data.topic === "CCCL/PURBACHAL/ENV_01") {
+          document.getElementById(
+            "temperature"
+          ).textContent = `${data.payload.temp_1} °C`;
+        }
+      };
+    </script>
+  </body>
+</html>
