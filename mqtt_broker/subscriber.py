@@ -33,7 +33,7 @@ except Exception:
 from green_power_backend.mongodb import MongoDBClient
 from grid.models import RTDataModel, ENYNowDataModel
 from generator.models import GeneratorDataModel
-from environment.models import EnvironmentData
+from environment.models import EnvironmentDataModel
 
 # ─────── Constants ───────
 DEFAULT_RECONNECT_DELAY = 1
@@ -189,7 +189,7 @@ class MQTTSubscriber:
         payload['timestamp'] = datetime.now(timezone.utc)
         
         try:
-            validated = EnvironmentData(**payload)
+            validated = EnvironmentDataModel(**payload)
             self.mongodb[ENV_COLLECTION].insert_one(payload.copy())
             log.info(f"{topic} inserted into MongoDB")
             self._send_realtime_data(topic, validated.model_dump(mode="json"))  # Only pushed if insert succeeds

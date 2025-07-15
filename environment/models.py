@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from datetime import datetime
 
-class EnvironmentData(BaseModel):
+class EnvironmentDataModel(BaseModel):
     pm1_0: int = Field(..., alias='pm1_0(ug/m3)')
     pm2_5: int = Field(..., alias='pm2_5(ug/m3)')
     pm10_0: int = Field(..., alias='pm10_0(ug/m3)')
