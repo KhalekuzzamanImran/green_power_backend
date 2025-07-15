@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'generator',
     'environment',
     'realtime',
+    'solar',
 ]
 
 MIDDLEWARE = [
