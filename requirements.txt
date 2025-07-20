@@ -1,5 +1,6 @@
 annotated-types==0.7.0
 asgiref==3.8.1
+async-timeout==5.0.1
 attrs==25.3.0
 autobahn==24.4.2
 Automat==25.4.16
@@ -11,7 +12,7 @@ cryptography==45.0.5
 daphne==4.2.1
 distlib==0.3.8
 Django==5.2.3
-django-rest-framework-mongoengine @ git+https://github.com/umutbozkurt/django-rest-framework-mongoengine.git@2e1b2d3ce3ebd54b325b4999fe6efaf75c0aec23
+django-rest-framework-mongoengine==3.4.1
 dnspython==2.7.0
 filelock==3.15.4
 hyperlink==21.0.0
@@ -34,11 +35,12 @@ pyOpenSSL==25.1.0
 pysmi==0.3.4
 pysnmp==4.4.12
 python-dotenv==1.1.1
+pytz==2025.2
 redis==6.2.0
 service-identity==24.2.0
-setuptools==70.1.1
 sqlparse==0.5.3
 stevedore==5.2.0
+tomli==2.2.1
 Twisted==25.5.0
 txaio==25.6.1
 typing-inspection==0.4.1
@@ -46,5 +48,4 @@ typing_extensions==4.14.1
 virtualenv==20.26.3
 virtualenv-clone==0.5.7
 virtualenvwrapper==6.1.0
-wheel==0.43.0
 zope.interface==7.2
