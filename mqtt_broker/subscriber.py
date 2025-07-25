@@ -181,6 +181,7 @@ class MQTTSubscriber:
                     }
                 }
             )
+            log.info(f"Message successfully broadcast to group '{REALTIME_GROUP}' on topic '{topic}'")
         except Exception as e:
             log.error(f"WebSocket push failed: {e}")
 
