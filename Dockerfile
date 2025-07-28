@@ -1,59 +1,52 @@
-# ---------- Build Stage ----------
+# ----------------------------------------
+# Stage 1: Build Python dependencies
+# ----------------------------------------
 FROM python:3.10-slim AS builder
 
-# Set environment variables
+# Set environment variables to optimize Python behavior
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Set working directory
-WORKDIR /app
+# Upgrade pip to latest version
+RUN pip install --upgrade pip
 
-# Install build dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Set working directory for build stage
+WORKDIR /green_power_backend
 
-# Copy and install Python dependencies
+# Copy only requirements file to leverage Docker cache for dependency layer
 COPY requirements.txt .
-RUN pip install --upgrade pip && \
-    pip install --prefix=/install -r requirements.txt
 
-# Copy project source code
-COPY . .
+# Install dependencies without cache for a smaller image
+RUN pip install --no-cache-dir -r requirements.txt
 
-# ---------- Runtime Stage ----------
-FROM python:3.10-slim AS runtime
+# ----------------------------------------
+# Stage 2: Create the final production image
+# ----------------------------------------
+FROM python:3.10-slim
 
-# Environment setup
+# Environment variables (redeclared here as this is a new stage)
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PATH="/install/bin:$PATH" \
-    PYTHONPATH="/install/lib/python3.10/site-packages"
+    PYTHONUNBUFFERED=1
 
-# Create app user and group early to cache
-RUN addgroup --system green_power && \
-    adduser --system --ingroup green_power green_power
+# Create non-root user for better security
+RUN useradd --create-home --system --shell /bin/bash green_power
 
-# Working directory
-WORKDIR /app
+# Set working directory inside the container
+WORKDIR /green_power_backend
 
-# Install only runtime system packages
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Copy only installed packages and scripts from builder stage
+COPY --from=builder /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
+COPY --from=builder /usr/local/bin/ /usr/local/bin/
 
-# Copy installed Python packages and app files from builder
-COPY --from=builder /install /install
-COPY --from=builder /app /app
+# Copy project source code and entrypoint script, with correct ownership
+COPY --chown=green_power:green_power . .
+COPY entrypoint.sh /usr/local/bin/
 
-# Copy and configure entrypoint
-COPY entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh && chown green_power:green_power /app/entrypoint.sh
+# Make the entrypoint script executable
+RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Adjust ownership and switch to non-root user
-RUN chown -R green_power:green_power /app
+# Switch to non-root user
 USER green_power
 
-# Use entrypoint script
-ENTRYPOINT ["/app/entrypoint.sh"]
+# Default command to run on container start
+ENTRYPOINT ["entrypoint.sh"]
