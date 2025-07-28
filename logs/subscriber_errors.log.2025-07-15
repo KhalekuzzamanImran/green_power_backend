@@ -1,0 +1,2954 @@
+[2025-07-15 04:50:53,534] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:50:53,671] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:50:53,672] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 04:50:53,672] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 04:52:11,192] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:52:11,315] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:52:11,316] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 04:52:11,317] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 04:52:48,194] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:52:48,319] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:52:48,322] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 04:52:48,324] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 04:57:09,532] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:57:09,659] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 04:57:09,660] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 04:57:09,662] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 05:01:10,088] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:01:10,213] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:01:10,215] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 05:01:10,218] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 05:01:12,246] WARNING subscriber - Disconnected from MQTT broker (code: Normal disconnection)
+[2025-07-15 05:01:27,207] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:01:27,343] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:01:27,346] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 05:01:27,348] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 05:04:24,673] WARNING subscriber - Disconnected from MQTT broker (code: Normal disconnection)
+[2025-07-15 05:04:29,695] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:04:29,857] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 05:04:29,860] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 05:04:29,863] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 06:10:15,744] WARNING subscriber - Disconnected from MQTT broker (code: Normal disconnection)
+[2025-07-15 08:33:35,959] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 08:33:36,082] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 08:33:36,086] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 08:33:36,086] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 08:33:38,412] WARNING subscriber - Disconnected from MQTT broker (code: Normal disconnection)
+[2025-07-15 08:40:52,696] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 08:40:52,821] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 08:40:52,821] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 08:40:52,822] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 08:52:54,584] WARNING subscriber - Disconnected from MQTT broker (code: Keep alive timeout)
+[2025-07-15 09:29:25,439] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 09:29:25,565] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 09:29:25,566] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 09:29:25,566] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ
+[2025-07-15 09:38:31,542] WARNING subscriber - Disconnected from MQTT broker (code: Normal disconnection)
+[2025-07-15 09:39:00,932] ERROR subscriber - MQTT_RT_DATA validation failed: 38 validation errors for RTDataModel
+ua
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ub
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ia
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ib
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ic
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uab
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uca
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+qc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwggl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+sc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zszgl
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfa
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+pfc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zglys
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+f
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+u-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i0
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i+
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+i-
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uxjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixja
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjb
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ixjc
+  Field required [type=missing, input_value={'unb': 0.0, 'inb': 0.755...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 09:39:01,058] ERROR subscriber - MQTT_ENY_NOW validation failed: 50 validation errors for ENYNowDataModel
+zygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fygsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fwgsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyjsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyfsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fypsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fyvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fydvsz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+zy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+fy6sz
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmpmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmax
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+dmsmaxoct
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iathd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icthd
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+uaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ubxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ucxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxbl7
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb3
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+iaxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+ibxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+icxb5
+  Field required [type=missing, input_value={'iaxb7': 0.0, 'ibxb7': 1...=datetime.timezone.utc)}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+[2025-07-15 09:39:01,061] WARNING subscriber - Unhandled topic: MQTT_DAY_DATA
+[2025-07-15 09:39:01,063] WARNING subscriber - Unhandled topic: MQTT_ENY_FRZ

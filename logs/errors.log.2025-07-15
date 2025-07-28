@@ -1,0 +1,160 @@
+[2025-07-15 04:49:52,716] ERROR root - Failed to set up Django
+Traceback (most recent call last):
+  File "/home/imrankhan/Desktop/green_power_v4/green_power_backend/mqtt_broker/subscriber.py", line 26, in <module>
+    django.setup()
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/apps/config.py", line 178, in create
+    mod = import_module(mod_path)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/imrankhan/Desktop/green_power_v4/green_power_backend/grid/apps.py", line 2, in <module>
+    from green_power_backend.mongodb import MongoDBClient
+  File "/home/imrankhan/Desktop/green_power_v4/green_power_backend/green_power_backend/mongodb.py", line 1, in <module>
+    from pymongo import MongoClient, errors
+ModuleNotFoundError: No module named 'pymongo'
+[2025-07-15 04:50:05,452] ERROR root - Failed to set up Django
+Traceback (most recent call last):
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+    import psycopg as Database
+ModuleNotFoundError: No module named 'psycopg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/backends/postgresql/base.py", line 27, in <module>
+    import psycopg2 as Database
+ModuleNotFoundError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/imrankhan/Desktop/green_power_v4/green_power_backend/mqtt_broker/subscriber.py", line 26, in <module>
+    django.setup()
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/contrib/auth/models.py", line 5, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/contrib/auth/base_user.py", line 43, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/models/base.py", line 145, in __new__
+    new_class.add_to_class("_meta", Options(meta, app_label))
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/models/base.py", line 373, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/models/options.py", line 238, in contribute_to_class
+    self.db_table, connection.ops.max_name_length()
+                   ^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/utils/connection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/utils/connection.py", line 62, in __getitem__
+    conn = self.create_connection(alias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/utils.py", line 193, in create_connection
+    backend = load_backend(db["ENGINE"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/utils.py", line 113, in load_backend
+    return import_module("%s.base" % backend_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 or psycopg module")
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 or psycopg module
+[2025-07-15 04:50:50,021] CRITICAL green_power_backend.mongodb - [MongoDB] Connection failed: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 3.0s, Topology Description: <TopologyDescription id: 6875de27d4d223389dea3650, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[2025-07-15 04:50:53,035] CRITICAL green_power_backend.mongodb - [MongoDB] Connection failed: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 3.0s, Topology Description: <TopologyDescription id: 6875de2ad4d223389dea3651, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[2025-07-15 04:52:07,738] CRITICAL green_power_backend.mongodb - [MongoDB] Connection failed: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 3.0s, Topology Description: <TopologyDescription id: 6875de74c852652654517549, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[2025-07-15 04:52:10,755] CRITICAL green_power_backend.mongodb - [MongoDB] Connection failed: localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 3.0s, Topology Description: <TopologyDescription id: 6875de77c85265265451754a, topology_type: Unknown, servers: [<ServerDescription ('localhost', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:27017: [Errno 111] Connection refused (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+[2025-07-15 08:38:58,186] WARNING django.security.csrf - Forbidden (CSRF token missing.): /admin/login/
+[2025-07-15 09:26:53,973] ERROR daphne.server - Exception inside application: RealtimeConsumer.disconnect() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/routing.py", line 48, in __call__
+    return await application(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/sessions.py", line 44, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/sessions.py", line 261, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/routing.py", line 118, in __call__
+    return await application(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 95, in app
+    return await consumer(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 74, in dispatch
+    await handler(message)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/generic/websocket.py", line 250, in websocket_disconnect
+    await self.disconnect(message["code"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RealtimeConsumer.disconnect() takes 1 positional argument but 2 were given
+[2025-07-15 09:26:56,983] ERROR daphne.server - Exception inside application: RealtimeConsumer.disconnect() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/routing.py", line 48, in __call__
+    return await application(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/sessions.py", line 44, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/sessions.py", line 261, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/auth.py", line 185, in __call__
+    return await super().__call__(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/middleware.py", line 24, in __call__
+    return await self.inner(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/routing.py", line 118, in __call__
+    return await application(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 95, in app
+    return await consumer(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/utils.py", line 50, in await_many_dispatch
+    await dispatch(result)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/consumer.py", line 74, in dispatch
+    await handler(message)
+  File "/home/imrankhan/.pyenv/versions/3.12.9/lib/python3.12/site-packages/channels/generic/websocket.py", line 250, in websocket_disconnect
+    await self.disconnect(message["code"])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RealtimeConsumer.disconnect() takes 1 positional argument but 2 were given
