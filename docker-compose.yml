@@ -1,123 +1,123 @@
 services:
-  green_power_postgres:
-    image: postgres:17
-    container_name: green_power_postgres
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB_NAME}
-      POSTGRES_USER: ${POSTGRES_DB_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
-    env_file:
-      - .env
-    ports:
-      - "5434:5432"
-    volumes:
-      - green_power_postgres_data:/var/lib/postgresql/data
-    networks:
-      - green_power_network
+    green_power_postgres:
+        image: postgres:17
+        container_name: green_power_postgres
+        environment:
+            POSTGRES_DB: ${POSTGRES_DB_NAME}
+            POSTGRES_USER: ${POSTGRES_DB_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+        env_file:
+            - .env
+        ports:
+            - "5434:5432"
+        volumes:
+            - green_power_postgres_data:/var/lib/postgresql/data
+        networks:
+            - green_power_network
 
-  green_power_mongodb:
-    image: mongo:latest
-    container_name: green_power_mongodb
-    volumes:
-      - green_power_mongo_data:/data/db
-    ports:
-      - "27018:27017"
-    environment:
-      # Create a root user in admin database
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
-      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
-    healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/green_power --quiet
-      interval: 10s
-      timeout: 5s
-      retries: 5
-    networks:
-      - green_power_network
+    green_power_mongodb:
+        image: mongo:latest
+        container_name: green_power_mongodb
+        volumes:
+            - green_power_mongo_data:/data/db
+        ports:
+            - "27018:27017"
+        environment:
+            # Create a root user in admin database
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USER}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+            MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
+        healthcheck:
+            test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/green_power --quiet
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        networks:
+            - green_power_network
 
-  green_power_backend:
-    build: .
-    container_name: green_power_backend
-    expose:
-      - 5000
-    depends_on:
-      - green_power_postgres
-      - green_power_mongodb
-      - green_power_redis
-    environment:
-      DJANGO_SECRET_KEY: ${SECRET_KEY}
-      DEBUG: ${DEBUG}
-      DJANGO_ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-    env_file:
-      - .env
-    volumes:
-      - green_power_backend_staticfiles:/green_power_backend/staticfiles
-      - green_power_backend_mediafiles:/green_power_backend/mediafiles
-    networks:
-      - green_power_network
+    green_power_backend:
+        build: .
+        container_name: green_power_backend
+        expose:
+            - 5000
+        depends_on:
+            - green_power_postgres
+            - green_power_mongodb
+            - green_power_redis
+        environment:
+            SECRET_KEY: ${SECRET_KEY}
+            DEBUG: ${DEBUG}
+            ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+        env_file:
+            - .env
+        volumes:
+            - green_power_backend_staticfiles:/green_power_backend/staticfiles
+            - green_power_backend_mediafiles:/green_power_backend/mediafiles
+        networks:
+            - green_power_network
 
-  green_power_redis:
-    image: redis:7-alpine
-    container_name: green_power_redis
-    ports:
-      - "6369:6379"
-    volumes:
-      - green_power_redis_data:/data
-    networks:
-      - green_power_network
+    green_power_redis:
+        image: redis:7-alpine
+        container_name: green_power_redis
+        ports:
+            - "6369:6379"
+        volumes:
+            - green_power_redis_data:/data
+        networks:
+            - green_power_network
 
-  green_power_nginx:
-    image: nginx:alpine
-    ports:
-      - "8010:8000"
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - green_power_backend_staticfiles:/green_power_backend/staticfiles
-      - green_power_backend_mediafiles:/green_power_backend/mediafiles
-    networks:
-      - green_power_network
-    depends_on:
-      - green_power_backend
+    green_power_nginx:
+        image: nginx:alpine
+        ports:
+            - "8010:8000"
+        volumes:
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - green_power_backend_staticfiles:/green_power_backend/staticfiles
+            - green_power_backend_mediafiles:/green_power_backend/mediafiles
+        networks:
+            - green_power_network
+        depends_on:
+            - green_power_backend
 
-  mqtt_broker:
-    build: .
-    container_name: green_power_mqtt_subscriber
-    entrypoint: ["python", "mqtt_broker/subscriber.py"]
-    depends_on:
-      - green_power_backend
-    environment:
-      DJANGO_SECRET_KEY: ${SECRET_KEY}
-      DEBUG: ${DEBUG}
-      DJANGO_ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-    env_file:
-      - .env
-    networks:
-      - green_power_network
+    mqtt_broker:
+        build: .
+        container_name: green_power_mqtt_subscriber
+        entrypoint: ["python", "mqtt_broker/subscriber.py"]
+        depends_on:
+            - green_power_backend
+        environment:
+            DJANGO_SECRET_KEY: ${SECRET_KEY}
+            DEBUG: ${DEBUG}
+            DJANGO_ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+        env_file:
+            - .env
+        networks:
+            - green_power_network
 
-  tcp_socket_server:
-    build: .
-    container_name: green_power_solar_server
-    entrypoint: ["python", "solar/tcp_socket_server/server.py"]
-    depends_on:
-      - green_power_backend
-    ports:
-      - "6000:6000"
-    environment:
-      DJANGO_SECRET_KEY: ${SECRET_KEY}
-      DEBUG: ${DEBUG}
-      DJANGO_ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-    env_file:
-      - .env
-    networks:
-      - green_power_network
+    tcp_socket_server:
+        build: .
+        container_name: green_power_solar_server
+        entrypoint: ["python", "solar/tcp_socket_server/server.py"]
+        depends_on:
+            - green_power_backend
+        ports:
+            - "6000:6000"
+        environment:
+            DJANGO_SECRET_KEY: ${SECRET_KEY}
+            DEBUG: ${DEBUG}
+            DJANGO_ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+        env_file:
+            - .env
+        networks:
+            - green_power_network
 
 volumes:
-  green_power_postgres_data:
-  green_power_mongo_data:
-  green_power_backend_staticfiles:
-  green_power_backend_mediafiles:
-  green_power_redis_data:
+    green_power_postgres_data:
+    green_power_mongo_data:
+    green_power_backend_staticfiles:
+    green_power_backend_mediafiles:
+    green_power_redis_data:
 
 networks:
-  green_power_network:
-    driver: bridge
+    green_power_network:
+        driver: bridge
