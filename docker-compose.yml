@@ -53,6 +53,7 @@ services:
         volumes:
             - green_power_backend_staticfiles:/green_power_backend/staticfiles
             - green_power_backend_mediafiles:/green_power_backend/mediafiles
+            - ./logs:/green_power_backend/logs
         networks:
             - green_power_network
 

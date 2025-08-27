@@ -38,10 +38,8 @@ WORKDIR /green_power_backend
 COPY --from=builder /usr/local/lib/python3.10/site-packages/ /usr/local/lib/python3.10/site-packages/
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 
-# Pre-create directories with correct permissions inside image
-RUN mkdir -p /green_power_backend/logs \
-             /green_power_backend/staticfiles \
-             /green_power_backend/mediafiles && \
+# Pre-create static/media dirs with proper ownership
+RUN mkdir -p /green_power_backend/staticfiles /green_power_backend/mediafiles && \
     chown -R green_power:green_power /green_power_backend
 
 # Copy project source code and entrypoint script, with correct ownership
