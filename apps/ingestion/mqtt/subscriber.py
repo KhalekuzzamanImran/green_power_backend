@@ -35,9 +35,9 @@ def setup_django() -> None:
     if apps.ready:
         return
 
-    base_dir = Path(__file__).resolve().parent.parent.parent
+    base_dir = Path(__file__).resolve().parent.parent.parent.parent
     sys.path.append(str(base_dir))
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.dev")
 
     try:
         django.setup()
@@ -84,6 +84,9 @@ class MQTTConfig:
         self.password: str = os.getenv("MQTT_PASSWORD")
         self.keepalive: int = int(os.getenv("MQTT_KEEPALIVE", 60))
         self.topics: List[str] = self._parse_topics(os.getenv("MQTT_TOPICS", "[]"))
+        if os.getenv("DJANGO_SETTINGS_MODULE", "").endswith(".prod"):
+            self.broker = os.getenv("MQTT_BROKER_DOCKER", self.broker)
+            self.port = int(os.getenv("MQTT_PORT_DOCKER", self.port))
 
     def _parse_topics(self, topics_str: str) -> List[str]:
         """
@@ -158,8 +161,11 @@ class MQTTSubscriber:
 
     def _on_message(self, client, userdata, msg):
         try:
-            payload = json.loads(msg.payload.decode())
-            log.debug(f"Received message on topic '{msg.topic}': {payload}")
+            payload = json.loads(msg.payload.decode(errors="replace"))
+            if not isinstance(payload, dict):
+                log.warning(f"Skipping non-object payload on topic '{msg.topic}'")
+                return
+            log.info(f"Received message on topic '{msg.topic}': {payload}")
             self.message_queue.put_nowait((msg.topic, payload))
         except json.JSONDecodeError:
             log.error(f"Invalid JSON in message from topic '{msg.topic}'")
@@ -201,12 +207,13 @@ class MQTTSubscriber:
 
     # ─────── Message Handling ───────
     def _handle_env_data(self, topic: str, payload: Dict[str, Any]):
+        payload = payload.copy()
         payload["timestamp"] = datetime.now(timezone.utc)
 
         try:
             validated = EnvironmentDataModel(**payload)
             self.collections[ENV_COLLECTION].insert_one(payload.copy())
-            log.debug(f"{topic} inserted into MongoDB")
+            log.info(f"{topic} inserted into MongoDB")
             self._send_realtime_data(topic, validated.model_dump(mode="json"))
         except ValidationError as ve:
             log.error(f"{topic} validation failed: {ve}")
@@ -217,11 +224,16 @@ class MQTTSubscriber:
         session = self.session_data.setdefault(topic, {})
 
         try:
-            data_point = payload.get("data", [{}])[0]
-            if not data_point:
+            data_list = payload.get("data") or []
+            if not data_list or not isinstance(data_list, list):
+                return
+            data_point = data_list[0]
+            if not isinstance(data_point, dict):
                 return
 
             timestamp = data_point.get("tp")
+            if timestamp is None:
+                return
             points = {str(p["id"]): p["val"] for p in data_point.get("point", [])}
             doc = {"timestamp": timestamp, **points}
 
@@ -239,7 +251,7 @@ class MQTTSubscriber:
                     return
 
                 self.collections[GEN_COLLECTION].insert_one(data_to_insert)
-                log.debug(f"{topic} inserted into MongoDB.")
+                log.info(f"{topic} inserted into MongoDB.")
                 self._send_realtime_data(topic, validated.model_dump(mode="json"))
                 session.clear()
             else:
@@ -260,7 +272,7 @@ class MQTTSubscriber:
                 session["timestamp"] = datetime.now(timezone.utc)
                 validated = model_class(**session)
                 self.collections[collection].insert_one(session.copy())
-                log.debug(f"{topic} inserted into MongoDB.")
+                log.info(f"{topic} inserted into MongoDB.")
                 self._send_realtime_data(topic, validated.model_dump(mode="json"))
             except ValidationError as ve:
                 log.error(f"{topic} validation failed: {ve}")
@@ -284,6 +296,7 @@ class MQTTSubscriber:
             try:
                 topic, payload = self.message_queue.get(timeout=QUEUE_TIMEOUT)
                 self._handle_message(topic, payload)
+                self.message_queue.task_done()
             except Empty:
                 continue
             except Exception as e:

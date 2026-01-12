@@ -5,7 +5,7 @@ from pathlib import Path
 # Configure Django settings
 BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE_DIR))  # Add project root to sys.path
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.dev")
 
 from config.mongodb import MongoDBClient  
 

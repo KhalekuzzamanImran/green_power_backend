@@ -44,7 +44,7 @@ RUN mkdir -p /green_power_backend/staticfiles /green_power_backend/mediafiles &&
 
 # Copy project source code and entrypoint script, with correct ownership
 COPY --chown=green_power:green_power . .
-COPY entrypoint.sh /usr/local/bin/
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Make the entrypoint script executable
 RUN chmod +x /usr/local/bin/entrypoint.sh

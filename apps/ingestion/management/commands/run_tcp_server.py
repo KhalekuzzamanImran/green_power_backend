@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from apps.ingestion.tcp_server import main
+from apps.ingestion.tcp.server import main
 
 
 class Command(BaseCommand):

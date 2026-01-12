@@ -91,12 +91,19 @@ class BaseMongoView(APIView):
         start = request.query_params.get("start")
         end = request.query_params.get("end")
 
-        limit = min(_parse_int(request.query_params.get("limit"), DEFAULT_LIMIT), MAX_LIMIT)
+        limit = _parse_int(request.query_params.get("limit"), DEFAULT_LIMIT)
+        limit = max(min(limit, MAX_LIMIT), 1)
         offset = max(_parse_int(request.query_params.get("offset"), 0), 0)
         aggregate = request.query_params.get("aggregate")
         aggregate = aggregate.lower() if aggregate else None
 
-        start_dt, end_dt = get_time_range(period, start, end)
+        try:
+            start_dt, end_dt = get_time_range(period, start, end)
+        except ValueError as exc:
+            return Response({"detail": str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+
+        if start_dt > end_dt:
+            return Response({"detail": "start must be before end."}, status=status.HTTP_400_BAD_REQUEST)
 
         if self.timestamp_is_epoch_ms:
             start_value = int(start_dt.timestamp() * 1000)
@@ -115,7 +122,12 @@ class BaseMongoView(APIView):
             }
         }
 
-        if aggregate in {"hourly", "daily"}:
+        if aggregate:
+            if aggregate not in {"hourly", "daily"}:
+                return Response(
+                    {"detail": "aggregate must be hourly or daily."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
             aggregate_limit = _parse_int(request.query_params.get("aggregate_limit"), AGGREGATE_DEFAULT_LIMIT)
             aggregate_limit = max(min(aggregate_limit, AGGREGATE_DEFAULT_LIMIT), 1)
             cursor = collection.find(query).sort(self.timestamp_field, -1).limit(aggregate_limit)

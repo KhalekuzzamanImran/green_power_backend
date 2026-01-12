@@ -11,16 +11,23 @@ PERIODS = {
     "monthly": timedelta(days=30),
     "yearly": timedelta(days=365),
 }
+ALLOWED_PERIODS = set(PERIODS.keys()) | {"till-date"}
 
 
 def parse_datetime(value: str) -> datetime:
     if value.endswith("Z"):
         value = value[:-1] + "+00:00"
-    return datetime.fromisoformat(value)
+    parsed = datetime.fromisoformat(value)
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed
 
 
 def get_time_range(period: str, start: str | None, end: str | None) -> Tuple[datetime, datetime]:
     now = datetime.now(timezone.utc)
+
+    if period not in ALLOWED_PERIODS:
+        raise ValueError(f"Invalid period: {period}")
 
     if end:
         end_dt = parse_datetime(end)

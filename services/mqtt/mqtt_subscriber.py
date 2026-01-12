@@ -1,4 +1,4 @@
-from apps.ingestion.mqtt_subscriber import main
+from apps.ingestion.mqtt.subscriber import main
 
 
 if __name__ == "__main__":

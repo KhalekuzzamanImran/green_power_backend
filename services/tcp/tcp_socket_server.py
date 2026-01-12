@@ -1,4 +1,4 @@
-from apps.ingestion.tcp_server import main
+from apps.ingestion.tcp.server import main
 
 
 if __name__ == "__main__":

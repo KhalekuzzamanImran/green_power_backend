@@ -15,7 +15,7 @@ from channels.auth import AuthMiddlewareStack
 
 from apps.realtime.routing import websocket_urlpatterns
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.dev')
 
 application = ProtocolTypeRouter({
     'http': get_asgi_application(),

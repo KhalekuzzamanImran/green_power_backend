@@ -37,9 +37,9 @@ def setup_django() -> None:
     if apps.ready:
         return
 
-    base_dir = Path(__file__).resolve().parent.parent.parent
+    base_dir = Path(__file__).resolve().parent.parent.parent.parent
     sys.path.insert(0, str(base_dir))
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.dev")
 
     try:
         django.setup()

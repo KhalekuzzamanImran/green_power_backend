@@ -19,19 +19,25 @@ import logging
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY') or os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',') if host.strip()]
+
+REALTIME_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv("REALTIME_ALLOWED_ORIGINS", "").split(",")
+    if origin.strip()
+]
 
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()
 SUBSCRIBER_LOG_LEVEL = os.getenv('SUBSCRIBER_LOG_LEVEL', LOG_LEVEL).upper()
@@ -131,6 +137,7 @@ DATABASES = {
         'PASSWORD': os.getenv('POSTGRES_DB_PASSWORD', os.getenv('POSTGRES_PASSWORD', 'postgres')),
         'HOST': os.getenv('POSTGRES_DB_HOST', os.getenv('POSTGRES_HOST', 'localhost')),
         'PORT': os.getenv('POSTGRES_DB_PORT', os.getenv('POSTGRES_PORT', '5432')),
+        'CONN_MAX_AGE': int(os.getenv('POSTGRES_CONN_MAX_AGE', '60')),
     }
 }
 
@@ -197,9 +204,10 @@ SECURE_SSL_REDIRECT = False
 
 STATIC_URL = 'static/'  # URL to access static files
 
-STATICFILES_DIRS = [
-    BASE_DIR / "assets"  # Where your custom static files (for dev) live
-]
+STATICFILES_DIRS = []
+assets_dir = BASE_DIR / "assets"
+if assets_dir.exists():
+    STATICFILES_DIRS.append(assets_dir)
 
 # Directory where Django will collect all static files to serve in production
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -211,7 +219,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Logger configuration
 LOG_DIR = BASE_DIR / 'logs'
-LOG_DIR.mkdir(exist_ok=True)
+try:
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+except OSError:
+    # Fallback to console-only logging if filesystem is read-only.
+    pass
+
+ENABLE_FILE_LOGS = LOG_DIR.exists() and os.access(LOG_DIR, os.W_OK)
 
 LOGGING = {
     'version': 1,
@@ -316,3 +330,9 @@ LOGGING = {
         },
     },
 }
+
+if not ENABLE_FILE_LOGS:
+    for handler_name in ("info_file", "error_file", "subscriber_error_file"):
+        LOGGING["handlers"].pop(handler_name, None)
+    for logger in LOGGING["loggers"].values():
+        logger["handlers"] = [h for h in logger.get("handlers", []) if h == "console"]
