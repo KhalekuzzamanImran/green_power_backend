@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Welcome to Green Power!</h1>
-    <p>Live Temperature: <span id="temperature">Waiting for data!</span></p>
+    <p>Total Current: <span id="total-current">Waiting for data!</span></p>
 
     <script>
       console.log("Connecting to WebSocket...");
@@ -22,10 +22,14 @@
         const data = JSON.parse(event.data);
         console.log("Received data:", data);
 
-        if (data.topic && data.topic === "CCCL/PURBACHAL/ENV_01") {
+        if (data.topic && data.topic === "MQTT_RT_DATA") {
+          const ia = Number(data.payload.ia ?? 0);
+          const ib = Number(data.payload.ib ?? 0);
+          const ic = Number(data.payload.ic ?? 0);
+          const totalCurrent = ia + ib + ic;
           document.getElementById(
-            "temperature"
-          ).textContent = `${data.payload.temp_1} °C`;
+            "total-current"
+          ).textContent = `${totalCurrent.toFixed(3)} A`;
         }
       };
     </script>
