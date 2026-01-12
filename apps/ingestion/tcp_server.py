@@ -4,12 +4,11 @@ import socket
 import struct
 import logging
 import pymongo
-import pytz
 import sys
 import os
 import django
 from typing import List, Tuple, Dict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from django.apps import apps
 
@@ -25,12 +24,13 @@ RESPONSE_PACKETS: List[bytes] = [
 RECV_BUFFER_SIZE: int = 1024
 CLIENT_TIMEOUT: int = 120  # seconds
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s] [%(levelname)s] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
+log = logging.getLogger("subscriber")
+if not log.hasHandlers():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="[%(asctime)s] [%(levelname)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
 
 
 def setup_django() -> None:
@@ -44,7 +44,7 @@ def setup_django() -> None:
     try:
         django.setup()
     except Exception:
-        logging.exception("Failed to set up Django")
+        log.exception("Failed to set up Django")
         raise
 
 
@@ -71,35 +71,14 @@ class TCPSocketServer:
             "today_solar_data": self.mongodb["today_solar_data"],
             "current_month_solar_data": self.mongodb["current_month_solar_data"],
         }
-        self._create_indexes()
         self.mongo_lock = threading.Lock()
-
-    def _create_indexes(self) -> None:
-        """Create optimized indexes for each collection."""
-        try:
-            self.collections["today_solar_data"].create_index(
-                "timestamp",
-                expireAfterSeconds=86400,  # 1 day
-            )
-            self.collections["current_month_solar_data"].create_index(
-                "timestamp",
-                expireAfterSeconds=2592000,  # 30 days
-            )
-            self.collections["solar_data"].create_index(
-                [
-                    ("timestamp", pymongo.DESCENDING),
-                    ("client_id", pymongo.ASCENDING),
-                ]
-            )
-        except pymongo.errors.OperationFailure as e:
-            logging.error(f"[!] Index creation error: {e}")
 
     def _store_data(self, data: Dict[str, List[float]], client_id: str) -> None:
         """Store data with thread-safe MongoDB operations."""
         if len(data) != 3:
             return
 
-        now = datetime.now(pytz.utc)
+        now = datetime.now(timezone.utc)
 
         document = {
             "timestamp": now,
@@ -115,10 +94,10 @@ class TCPSocketServer:
                 self.collections["today_solar_data"].insert_one(document)
                 self.collections["current_month_solar_data"].insert_one(document)
 
-            logging.info(f"[+] Data stored in all MongoDB collections for {client_id} at {now}")
+            log.info(f"[+] Data stored in all MongoDB collections for {client_id} at {now}")
 
         except pymongo.errors.PyMongoError as e:
-            logging.error(f"[!] MongoDB error for {client_id}: {e}")
+            log.error(f"[!] MongoDB error for {client_id}: {e}")
 
     def _process_response(self, index: int, hex_response: str) -> List[float]:
         """Process the hex response with validation."""
@@ -131,7 +110,7 @@ class TCPSocketServer:
 
             chunk_size = 16 if index == 2 else 8
             if len(payload) % chunk_size != 0:
-                logging.warning(f"[!] Invalid payload length {len(payload)}")
+                log.warning(f"[!] Invalid payload length {len(payload)}")
                 return []
 
             chunks = [payload[i : i + chunk_size] for i in range(0, len(payload), chunk_size)]
@@ -142,12 +121,12 @@ class TCPSocketServer:
                     value = struct.unpack("!f" if chunk_size == 8 else "!q", bytes.fromhex(chunk))[0]
                     converted_values.append(float(value))
                 except (struct.error, ValueError) as e:
-                    logging.warning(f"[!] Data unpacking error: {e}")
+                    log.warning(f"[!] Data unpacking error: {e}")
 
             return converted_values
 
         except Exception as e:
-            logging.warning(f"[!] Processing error: {e}")
+            log.warning(f"[!] Processing error: {e}")
             return []
 
     def handle_client(self, client_socket: socket.socket, addr: Tuple[str, int]) -> None:
@@ -162,26 +141,26 @@ class TCPSocketServer:
                 while True:
                     data = client_socket.recv(RECV_BUFFER_SIZE)
                     if not data:
-                        logging.info(f"[-] Client disconnected: {client_id}")
+                        log.info(f"[-] Client disconnected: {client_id}")
                         break
 
-                    logging.info(f"[←] Heartbeat received from {client_id}: {data}")
+                    log.debug(f"[←] Heartbeat received from {client_id}: {data}")
 
                     if data == self.heartbeat_packet:
                         with self.cycle_lock:
                             index, response_packet = next(self.response_cycle)
 
-                        logging.info(f"[→] Sending response #{index} to {client_id}")
+                        log.debug(f"[→] Sending response #{index} to {client_id}")
                         client_socket.sendall(response_packet)
 
                         try:
                             response = client_socket.recv(RECV_BUFFER_SIZE)
                             if not response:
-                                logging.warning(f"[-] Client {client_id} disconnected after response")
+                                log.warning(f"[-] Client {client_id} disconnected after response")
                                 break
 
                             hex_response = response.hex().upper()
-                            logging.info(f"[←] Response from {client_id}: {hex_response}")
+                            log.debug(f"[←] Response from {client_id}: {hex_response}")
                             values = self._process_response(index, hex_response)
                             if values:
                                 accumulated_data[f"response_{index}"] = values
@@ -190,17 +169,17 @@ class TCPSocketServer:
                                     accumulated_data = {}
 
                         except (socket.timeout, socket.error):
-                            logging.warning(f"[!] Timeout waiting for response from {client_id}")
+                            log.warning(f"[!] Timeout waiting for response from {client_id}")
                             break
                     else:
-                        logging.warning(f"[!] Unrecognized packet from {client_id}: {data}")
+                        log.warning(f"[!] Unrecognized packet from {client_id}: {data}")
 
             except socket.timeout:
-                logging.warning(f"[!] Connection timeout with {client_id} ({CLIENT_TIMEOUT}s inactivity)")
+                log.warning(f"[!] Connection timeout with {client_id} ({CLIENT_TIMEOUT}s inactivity)")
             except (socket.error, ConnectionResetError, BrokenPipeError):
-                logging.error(f"[!] Connection lost with {client_id}")
+                log.error(f"[!] Connection lost with {client_id}")
             except Exception as e:
-                logging.exception(f"[!] Error handling {client_id}: {e}")
+                log.exception(f"[!] Error handling {client_id}: {e}")
 
     def start_server(self) -> None:
         """Starts the TCP server and listens for connections."""
@@ -208,28 +187,28 @@ class TCPSocketServer:
             server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             server_socket.bind((self.host, self.port))
             server_socket.listen(50)
-            logging.info(f"[*] Server listening on {self.host}:{self.port}")
+            log.info(f"[*] Server listening on {self.host}:{self.port}")
 
             try:
                 while True:
                     client_socket, addr = server_socket.accept()
-                    logging.info(f"[+] New connection from {addr[0]}:{addr[1]}")
+                    log.info(f"[+] New connection from {addr[0]}:{addr[1]}")
                     threading.Thread(
                         target=self.handle_client,
                         args=(client_socket, addr),
                         daemon=True,
                     ).start()
             except KeyboardInterrupt:
-                logging.info("\n[*] Server shutdown requested. Exiting gracefully...")
+                log.info("\n[*] Server shutdown requested. Exiting gracefully...")
             except Exception as e:
-                logging.exception(f"[!] Server error: {e}")
+                log.exception(f"[!] Server error: {e}")
 
 
 def main() -> None:
     try:
         server = TCPSocketServer()
     except RuntimeError as exc:
-        logging.critical(str(exc))
+        log.critical(str(exc))
         sys.exit(1)
     server.start_server()
 

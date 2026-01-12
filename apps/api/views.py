@@ -119,9 +119,8 @@ class BaseMongoView(APIView):
             aggregate_limit = _parse_int(request.query_params.get("aggregate_limit"), AGGREGATE_DEFAULT_LIMIT)
             aggregate_limit = max(min(aggregate_limit, AGGREGATE_DEFAULT_LIMIT), 1)
             cursor = collection.find(query).sort(self.timestamp_field, -1).limit(aggregate_limit)
-            docs = list(cursor)
             results = aggregate_docs(
-                docs,
+                cursor,
                 aggregate,
                 self.timestamp_field,
                 self.timestamp_is_epoch_ms,

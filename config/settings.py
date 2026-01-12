@@ -33,6 +33,9 @@ DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
+LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO').upper()
+SUBSCRIBER_LOG_LEVEL = os.getenv('SUBSCRIBER_LOG_LEVEL', LOG_LEVEL).upper()
+
 
 # Application definition
 
@@ -123,25 +126,36 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB_NAME', 'postgres'),
-        'USER': os.getenv('POSTGRES_DB_USER', 'postgres'),
-        'PASSWORD': os.getenv('POSTGRES_DB_PASSWORD', 'postgres'),
-        'HOST': os.getenv('POSTGRES_DB_HOST', 'localhost'),
-        'PORT': os.getenv('POSTGRES_DB_PORT', '5432'),
+        'NAME': os.getenv('POSTGRES_DB_NAME', os.getenv('POSTGRES_DB', 'postgres')),
+        'USER': os.getenv('POSTGRES_DB_USER', os.getenv('POSTGRES_USER', 'postgres')),
+        'PASSWORD': os.getenv('POSTGRES_DB_PASSWORD', os.getenv('POSTGRES_PASSWORD', 'postgres')),
+        'HOST': os.getenv('POSTGRES_DB_HOST', os.getenv('POSTGRES_HOST', 'localhost')),
+        'PORT': os.getenv('POSTGRES_DB_PORT', os.getenv('POSTGRES_PORT', '5432')),
     }
 }
 
 # MongoDB configuration
-MONGO_DB_HOST = os.getenv('MONGO_DB_HOST', 'localhost')
-MONGO_DB_PORT = os.getenv('MONGO_DB_PORT', '27017')
-MONGO_DB_NAME = os.getenv('MONGO_DB_NAME', 'test')
-MONGO_DB_USER = os.getenv("MONGO_DB_USER")
-MONGO_DB_PASSWORD = os.getenv("MONGO_DB_PASSWORD")
+MONGO_DB_HOST = os.getenv('MONGO_DB_HOST', os.getenv('MONGODB_HOST', 'localhost'))
+MONGO_DB_PORT = os.getenv('MONGO_DB_PORT', os.getenv('MONGODB_PORT', '27017'))
+MONGO_DB_NAME = os.getenv('MONGO_DB_NAME', os.getenv('MONGODB_NAME', 'test'))
+MONGO_DB_USER = os.getenv('MONGO_DB_USER', os.getenv('MONGODB_USER'))
+MONGO_DB_PASSWORD = os.getenv('MONGO_DB_PASSWORD', os.getenv('MONGODB_PASSWORD'))
 
-if MONGO_DB_USER and MONGO_DB_PASSWORD:
-    MONGO_DB_URI = f"mongodb://{MONGO_DB_USER}:{MONGO_DB_PASSWORD}@{MONGO_DB_HOST}:{MONGO_DB_PORT}/?authSource=admin"
-else:
-    MONGO_DB_URI = f"mongodb://{MONGO_DB_HOST}:{MONGO_DB_PORT}"
+MONGO_DB_URI = os.getenv('MONGO_DB_URI', os.getenv('MONGODB_URI'))
+if not MONGO_DB_URI:
+    if MONGO_DB_USER and MONGO_DB_PASSWORD:
+        MONGO_DB_URI = (
+            f"mongodb://{MONGO_DB_USER}:{MONGO_DB_PASSWORD}@{MONGO_DB_HOST}:{MONGO_DB_PORT}/?authSource=admin"
+        )
+    else:
+        MONGO_DB_URI = f"mongodb://{MONGO_DB_HOST}:{MONGO_DB_PORT}"
+
+MONGO_MAX_POOL_SIZE = int(os.getenv('MONGO_MAX_POOL_SIZE', '50'))
+MONGO_MIN_POOL_SIZE = int(os.getenv('MONGO_MIN_POOL_SIZE', '0'))
+MONGO_CONNECT_TIMEOUT_MS = int(os.getenv('MONGO_CONNECT_TIMEOUT_MS', '2000'))
+MONGO_SOCKET_TIMEOUT_MS = int(os.getenv('MONGO_SOCKET_TIMEOUT_MS', '20000'))
+MONGO_SERVER_SELECTION_TIMEOUT_MS = int(os.getenv('MONGO_SERVER_SELECTION_TIMEOUT_MS', '3000'))
+MONGO_CREATE_INDEXES = os.getenv('MONGO_CREATE_INDEXES', 'true').lower() in ('true', '1', 'yes')
 
 
 # Password validation
@@ -224,7 +238,7 @@ LOGGING = {
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'level': 'DEBUG',
+            'level': LOG_LEVEL,
             'formatter': 'standard',
         },
         'info_file': {
@@ -263,7 +277,7 @@ LOGGING = {
         # Django core
         'django': {
             'handlers': ['console', 'info_file', 'error_file'],
-            'level': 'INFO',
+            'level': LOG_LEVEL,
             'propagate': False,
         },
         'django.request': {
@@ -273,7 +287,7 @@ LOGGING = {
         },
         'django.server': {
             'handlers': ['console', 'info_file', 'error_file'],
-            'level': 'INFO',
+            'level': LOG_LEVEL,
             'propagate': False,
         },
         'django.db.backends': {
@@ -285,12 +299,12 @@ LOGGING = {
         # Project app-level loggers
         'config': {
             'handlers': ['console', 'info_file', 'error_file'],
-            'level': 'DEBUG',
+            'level': LOG_LEVEL,
             'propagate': False,
         },
         'subscriber': {
             'handlers': ['console', 'subscriber_error_file'],
-            'level': 'DEBUG',
+            'level': SUBSCRIBER_LOG_LEVEL,
             'propagate': False,
         },
 

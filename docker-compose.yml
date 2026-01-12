@@ -3,9 +3,9 @@ services:
         image: postgres:17
         container_name: green_power_postgres
         environment:
-            POSTGRES_DB: ${POSTGRES_DB_NAME}
-            POSTGRES_USER: ${POSTGRES_DB_USER}
-            POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB}
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
         env_file:
             - .env
         ports:
@@ -24,9 +24,9 @@ services:
             - "27018:27017"
         environment:
             # Create a root user in admin database
-            MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USER}
-            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
-            MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
+            MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+            MONGO_INITDB_DATABASE: ${MONGODB_NAME}
         healthcheck:
             test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/green_power --quiet
             interval: 10s
@@ -83,7 +83,7 @@ services:
     mqtt_broker:
         build: .
         container_name: green_power_mqtt_subscriber
-        entrypoint: ["python", "services/mqtt/mqtt_subscriber.py"]
+        entrypoint: ["python", "manage.py", "run_mqtt_subscriber"]
         depends_on:
             - green_power_backend
         environment:
@@ -98,7 +98,7 @@ services:
     tcp_socket_server:
         build: .
         container_name: green_power_solar_server
-        entrypoint: ["python", "services/tcp/tcp_socket_server.py"]
+        entrypoint: ["python", "manage.py", "run_tcp_server"]
         depends_on:
             - green_power_backend
         ports:

@@ -111,6 +111,12 @@ class MQTTSubscriber:
         self.message_queue = Queue(maxsize=QUEUE_MAX_SIZE)
         self.session_data: Dict[str, Dict[str, Any]] = {}
         self.mongodb = MongoDBClient.require_db()
+        self.collections = {
+            ENV_COLLECTION: self.mongodb[ENV_COLLECTION],
+            GEN_COLLECTION: self.mongodb[GEN_COLLECTION],
+            TOPIC_MAPPING["MQTT_RT_DATA"][1]: self.mongodb[TOPIC_MAPPING["MQTT_RT_DATA"][1]],
+            TOPIC_MAPPING["MQTT_ENY_NOW"][1]: self.mongodb[TOPIC_MAPPING["MQTT_ENY_NOW"][1]],
+        }
         self.channel_layer = get_channel_layer()
 
     def _init_mqtt_client(self) -> mqtt_client.Client:
@@ -153,7 +159,7 @@ class MQTTSubscriber:
     def _on_message(self, client, userdata, msg):
         try:
             payload = json.loads(msg.payload.decode())
-            log.info(f"Received message on topic '{msg.topic}': {payload}")
+            log.debug(f"Received message on topic '{msg.topic}': {payload}")
             self.message_queue.put_nowait((msg.topic, payload))
         except json.JSONDecodeError:
             log.error(f"Invalid JSON in message from topic '{msg.topic}'")
@@ -189,7 +195,7 @@ class MQTTSubscriber:
                     }
                 }
             )
-            log.info(f"Message successfully broadcast to group '{REALTIME_GROUP}' on topic '{topic}'")
+            log.debug(f"Message broadcast to group '{REALTIME_GROUP}' on topic '{topic}'")
         except Exception as e:
             log.error(f"WebSocket push failed: {e}")
 
@@ -199,8 +205,8 @@ class MQTTSubscriber:
 
         try:
             validated = EnvironmentDataModel(**payload)
-            self.mongodb[ENV_COLLECTION].insert_one(payload.copy())
-            log.info(f"{topic} inserted into MongoDB")
+            self.collections[ENV_COLLECTION].insert_one(payload.copy())
+            log.debug(f"{topic} inserted into MongoDB")
             self._send_realtime_data(topic, validated.model_dump(mode="json"))
         except ValidationError as ve:
             log.error(f"{topic} validation failed: {ve}")
@@ -232,8 +238,8 @@ class MQTTSubscriber:
                     session.clear()
                     return
 
-                self.mongodb[GEN_COLLECTION].insert_one(data_to_insert)
-                log.info(f"{topic} inserted into MongoDB.")
+                self.collections[GEN_COLLECTION].insert_one(data_to_insert)
+                log.debug(f"{topic} inserted into MongoDB.")
                 self._send_realtime_data(topic, validated.model_dump(mode="json"))
                 session.clear()
             else:
@@ -253,8 +259,8 @@ class MQTTSubscriber:
                 session["device_id"] = session.pop("id", None)
                 session["timestamp"] = datetime.now(timezone.utc)
                 validated = model_class(**session)
-                self.mongodb[collection].insert_one(session.copy())
-                log.info(f"{topic} inserted into MongoDB.")
+                self.collections[collection].insert_one(session.copy())
+                log.debug(f"{topic} inserted into MongoDB.")
                 self._send_realtime_data(topic, validated.model_dump(mode="json"))
             except ValidationError as ve:
                 log.error(f"{topic} validation failed: {ve}")
