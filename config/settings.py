@@ -162,21 +162,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Allow Django to trust the proxy headers
-USE_X_FORWARDED_HOST = True
-SECURE_PROXY_SSL_HEADER = None  # disable HTTPS redirect in dev
-
-# Update DRF Spectacular Swagger docs
-SPECTACULAR_SETTINGS = {
-    'TITLE': 'Green Power API',
-    'DESCRIPTION': 'REST API for environment, generator, grid, and solar data with time filters and aggregation.',
-    'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-    'SERVE_PUBLIC': True,
-    'BASE_URL': 'http://127.0.0.1:8010',  # fixes absolute URL for Swagger docs
-}
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
@@ -187,6 +172,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+SECURE_SSL_REDIRECT = False
 
 
 # Static files (CSS, JavaScript, Images)
