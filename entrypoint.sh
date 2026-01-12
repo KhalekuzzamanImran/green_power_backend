@@ -19,14 +19,10 @@ print_step() {
 print_step "Collecting static files 📁"
 python manage.py collectstatic --noinput
 
-# Make database migrations
-print_step "Creating database migrations 🛠️"
-python manage.py makemigrations --noinput
-
 # Apply database migrations
 print_step "Applying database migrations 🗃️"
 python manage.py migrate --noinput
 
 # Start the Daphne server
 print_step "Starting Daphne server 🚀"
-exec daphne -b 0.0.0.0 -p 5000 green_power_backend.asgi:application
+exec daphne -b 0.0.0.0 -p 5000 config.asgi:application

@@ -15,25 +15,43 @@ from datetime import datetime, timezone
 from pydantic import ValidationError
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
+from django.apps import apps
 
 # ─────── Load Environment Variables ───────
 load_dotenv()
 
-# ─────── Django Setup ───────
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.append(str(BASE_DIR))
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'green_power_backend.settings')
+# ─────── log Setup ───────
+log = logging.getLogger("subscriber")
 
-try:
-    django.setup()
-except Exception:
-    logging.exception("Failed to set up Django")
-    sys.exit(1)
+# Fallback for standalone script runs
+if not log.hasHandlers():
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format="[%(asctime)s] %(levelname)s %(name)s - %(message)s"
+    )
 
-from green_power_backend.mongodb import MongoDBClient
-from grid.models import RTDataModel, ENYNowDataModel
-from generator.models import GeneratorDataModel
-from environment.models import EnvironmentDataModel
+
+def setup_django() -> None:
+    if apps.ready:
+        return
+
+    base_dir = Path(__file__).resolve().parent.parent.parent
+    sys.path.append(str(base_dir))
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+
+    try:
+        django.setup()
+    except Exception:
+        log.exception("Failed to set up Django")
+        raise
+
+
+setup_django()
+
+from config.mongodb import MongoDBClient
+from apps.grid.models import RTDataModel, ENYNowDataModel
+from apps.generator.models import GeneratorDataModel
+from apps.environment.models import EnvironmentDataModel
 
 # ─────── Constants ───────
 DEFAULT_RECONNECT_DELAY = 1
@@ -52,15 +70,6 @@ GEN_COLLECTION = "generator_data"
 ENV_COLLECTION = "environment_data"
 REALTIME_GROUP = "realtime_updates"
 
-# ─────── log Setup ───────
-log = logging.getLogger('subscriber')
-
-# Fallback for standalone script runs
-if not log.hasHandlers():
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format='[%(asctime)s] %(levelname)s %(name)s - %(message)s'
-    )
 
 # ─────── MQTT Configuration ───────
 class MQTTConfig:
@@ -69,17 +78,12 @@ class MQTTConfig:
     """
 
     def __init__(self):
-        self.broker: str = os.getenv('MQTT_BROKER', 'localhost')
-        self.port: int = int(os.getenv('MQTT_PORT', 1883))
-        self.username: str = os.getenv('MQTT_USERNAME')
-        self.password: str = os.getenv('MQTT_PASSWORD')
-        self.keepalive: int = int(os.getenv('MQTT_KEEPALIVE', 60))
-        self.topics: List[str] = self._parse_topics(os.getenv('MQTT_TOPICS', '[]'))
-
-        # log.info(
-        #     f"[MQTTConfig] Initialized: broker={self.broker}, port={self.port}, "
-        #     f"keepalive={self.keepalive}, topics={self.topics}"
-        # )
+        self.broker: str = os.getenv("MQTT_BROKER", "localhost")
+        self.port: int = int(os.getenv("MQTT_PORT", 1883))
+        self.username: str = os.getenv("MQTT_USERNAME")
+        self.password: str = os.getenv("MQTT_PASSWORD")
+        self.keepalive: int = int(os.getenv("MQTT_KEEPALIVE", 60))
+        self.topics: List[str] = self._parse_topics(os.getenv("MQTT_TOPICS", "[]"))
 
     def _parse_topics(self, topics_str: str) -> List[str]:
         """
@@ -106,7 +110,7 @@ class MQTTSubscriber:
         self.reconnect_delay = DEFAULT_RECONNECT_DELAY
         self.message_queue = Queue(maxsize=QUEUE_MAX_SIZE)
         self.session_data: Dict[str, Dict[str, Any]] = {}
-        self.mongodb = MongoDBClient().get_db()
+        self.mongodb = MongoDBClient.require_db()
         self.channel_layer = get_channel_layer()
 
     def _init_mqtt_client(self) -> mqtt_client.Client:
@@ -170,14 +174,18 @@ class MQTTSubscriber:
             self.reconnect_delay = min(self.reconnect_delay * 2, MAX_RECONNECT_DELAY)
 
     def _send_realtime_data(self, topic: str, data: Dict[str, Any]) -> None:
+        if not self.channel_layer:
+            log.warning("Channel layer unavailable; skipping realtime broadcast.")
+            return
+
         try:
             async_to_sync(self.channel_layer.group_send)(
                 REALTIME_GROUP,
                 {
-                    'type': 'send.update',
-                    'data': {
-                        'topic': topic,
-                        'payload': data,
+                    "type": "send.update",
+                    "data": {
+                        "topic": topic,
+                        "payload": data,
                     }
                 }
             )
@@ -187,19 +195,21 @@ class MQTTSubscriber:
 
     # ─────── Message Handling ───────
     def _handle_env_data(self, topic: str, payload: Dict[str, Any]):
-        payload['timestamp'] = datetime.now(timezone.utc)
-        
+        payload["timestamp"] = datetime.now(timezone.utc)
+
         try:
             validated = EnvironmentDataModel(**payload)
             self.mongodb[ENV_COLLECTION].insert_one(payload.copy())
             log.info(f"{topic} inserted into MongoDB")
-            self._send_realtime_data(topic, validated.model_dump(mode="json"))  # Only pushed if insert succeeds
+            self._send_realtime_data(topic, validated.model_dump(mode="json"))
+        except ValidationError as ve:
+            log.error(f"{topic} validation failed: {ve}")
         except Exception as e:
-            log.error(f"{topic} insert or validation failed: {e}")
+            log.error(f"{topic} insert failed: {e}")
 
     def _handle_generator_data(self, topic: str, payload: Dict[str, Any]):
         session = self.session_data.setdefault(topic, {})
-        
+
         try:
             data_point = payload.get("data", [{}])[0]
             if not data_point:
@@ -224,7 +234,7 @@ class MQTTSubscriber:
 
                 self.mongodb[GEN_COLLECTION].insert_one(data_to_insert)
                 log.info(f"{topic} inserted into MongoDB.")
-                self._send_realtime_data(topic, validated.model_dump(mode='json'))
+                self._send_realtime_data(topic, validated.model_dump(mode="json"))
                 session.clear()
             else:
                 session.update(doc)
@@ -233,20 +243,19 @@ class MQTTSubscriber:
             log.error(f"{topic} insert or processing error: {e}")
             session.clear()
 
-
     def _handle_grid_data(self, topic: str, payload: Dict[str, Any]):
         model_class, collection = TOPIC_MAPPING[topic]
         session = self.session_data.setdefault(topic, {})
         session.update(payload)
 
-        if payload.get('isend') == '1':
+        if payload.get("isend") == "1":
             try:
-                session['device_id'] = session.pop('id')
-                session['timestamp'] = datetime.now(timezone.utc)
+                session["device_id"] = session.pop("id", None)
+                session["timestamp"] = datetime.now(timezone.utc)
                 validated = model_class(**session)
                 self.mongodb[collection].insert_one(session.copy())
                 log.info(f"{topic} inserted into MongoDB.")
-                self._send_realtime_data(topic, validated.model_dump(mode='json'))
+                self._send_realtime_data(topic, validated.model_dump(mode="json"))
             except ValidationError as ve:
                 log.error(f"{topic} validation failed: {ve}")
             except Exception as e:
@@ -274,14 +283,13 @@ class MQTTSubscriber:
             except Exception as e:
                 log.error(f"Queue processing error: {e}")
 
-
     def connect(self):
         try:
             self.client.connect_async(self.config.broker, self.config.port, self.config.keepalive)
             self.client.loop_start()
             threading.Thread(target=self._process_queue, daemon=True).start()
             log.info("MQTT Subscriber started.")
-        except Exception as e:
+        except Exception:
             log.exception("Initial connection failed.")
             raise
 
@@ -292,8 +300,12 @@ class MQTTSubscriber:
         log.info("MQTT Subscriber stopped.")
 
 
-def main():
-    subscriber = MQTTSubscriber(MQTTConfig())
+def main() -> None:
+    try:
+        subscriber = MQTTSubscriber(MQTTConfig())
+    except RuntimeError as exc:
+        log.critical(str(exc))
+        sys.exit(1)
 
     def shutdown_handler(signum, frame):
         log.info("Shutting down gracefully...")
@@ -302,15 +314,14 @@ def main():
 
     signal.signal(signal.SIGINT, shutdown_handler)
     signal.signal(signal.SIGTERM, shutdown_handler)
-    subscriber.connect()   
+    subscriber.connect()
 
     try:
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
         shutdown_handler(None, None)
-    
 
-# ─────── Entry Point ───────
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

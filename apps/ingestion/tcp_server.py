@@ -7,19 +7,16 @@ import pymongo
 import pytz
 import sys
 import os
+import django
 from typing import List, Tuple, Dict
 from datetime import datetime
 from pathlib import Path
+from django.apps import apps
 
-# Configure Django settings
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.insert(0, str(BASE_DIR))  # Add project root to sys.path
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "green_power_backend.settings")
-
-from green_power_backend.mongodb import MongoDBClient
+from config.mongodb import MongoDBClient
 
 # Constants
-HEARTBEAT_PACKET: bytes = b'GWCCCL0001'
+HEARTBEAT_PACKET: bytes = b"GWCCCL0001"
 RESPONSE_PACKETS: List[bytes] = [
     bytes.fromhex("01 26 00 00 00 06 01 03 0B B7 00 0A"),
     bytes.fromhex("01 6E 00 00 00 06 01 03 0B ED 00 06"),
@@ -31,18 +28,36 @@ CLIENT_TIMEOUT: int = 120  # seconds
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
-    format='[%(asctime)s] [%(levelname)s] %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    format="[%(asctime)s] [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
+
+
+def setup_django() -> None:
+    if apps.ready:
+        return
+
+    base_dir = Path(__file__).resolve().parent.parent.parent
+    sys.path.insert(0, str(base_dir))
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+
+    try:
+        django.setup()
+    except Exception:
+        logging.exception("Failed to set up Django")
+        raise
+
+
+setup_django()
 
 
 class TCPSocketServer:
     def __init__(
         self,
-        host: str = '0.0.0.0',
+        host: str = "0.0.0.0",
         port: int = 6000,
         heartbeat_packet: bytes = HEARTBEAT_PACKET,
-        response_packets: List[bytes] = RESPONSE_PACKETS
+        response_packets: List[bytes] = RESPONSE_PACKETS,
     ):
         self.host = host
         self.port = port
@@ -50,42 +65,40 @@ class TCPSocketServer:
         self.response_packets = response_packets
         self.response_cycle = itertools.cycle(enumerate(self.response_packets))
         self.cycle_lock = threading.Lock()
-        self.mongodb = MongoDBClient.get_db()
+        self.mongodb = MongoDBClient.require_db()
         self.collections = {
-            'solar_data': self.mongodb['solar_data'],
-            'today_solar_data': self.mongodb['today_solar_data'],
-            'current_month_solar_data': self.mongodb['current_month_solar_data']
+            "solar_data": self.mongodb["solar_data"],
+            "today_solar_data": self.mongodb["today_solar_data"],
+            "current_month_solar_data": self.mongodb["current_month_solar_data"],
         }
         self._create_indexes()
         self.mongo_lock = threading.Lock()
 
-    
     def _create_indexes(self) -> None:
         """Create optimized indexes for each collection."""
         try:
-            # TTL indexes
-            self.collections['today_solar_data'].create_index(
+            self.collections["today_solar_data"].create_index(
                 "timestamp",
-                expireAfterSeconds=86400  # 1 day
+                expireAfterSeconds=86400,  # 1 day
             )
-            self.collections['current_month_solar_data'].create_index(
+            self.collections["current_month_solar_data"].create_index(
                 "timestamp",
-                expireAfterSeconds=2592000  # 30 days
+                expireAfterSeconds=2592000,  # 30 days
             )
-            # Compound index
-            self.collections['solar_data'].create_index([
-                ("timestamp", pymongo.DESCENDING),
-                ("client_id", pymongo.ASCENDING)
-            ])
+            self.collections["solar_data"].create_index(
+                [
+                    ("timestamp", pymongo.DESCENDING),
+                    ("client_id", pymongo.ASCENDING),
+                ]
+            )
         except pymongo.errors.OperationFailure as e:
-            print(f"[!] Index creation error: {e}")
-
+            logging.error(f"[!] Index creation error: {e}")
 
     def _store_data(self, data: Dict[str, List[float]], client_id: str) -> None:
         """Store data with thread-safe MongoDB operations."""
         if len(data) != 3:
             return
-            
+
         now = datetime.now(pytz.utc)
 
         document = {
@@ -95,53 +108,47 @@ class TCPSocketServer:
             "power": data.get("response_1", []),
             "energy_consumption": data.get("response_2", []),
         }
-        
+
         try:
             with self.mongo_lock:
-                # Bulk insert/update
-                self.collections['solar_data'].insert_one(document)
-                self.collections['today_solar_data'].insert_one(document)
-                self.collections['current_month_solar_data'].insert_one(document)
-                
+                self.collections["solar_data"].insert_one(document)
+                self.collections["today_solar_data"].insert_one(document)
+                self.collections["current_month_solar_data"].insert_one(document)
+
             logging.info(f"[+] Data stored in all MongoDB collections for {client_id} at {now}")
-            
+
         except pymongo.errors.PyMongoError as e:
             logging.error(f"[!] MongoDB error for {client_id}: {e}")
 
-
-    
     def _process_response(self, index: int, hex_response: str) -> List[float]:
         """Process the hex response with validation."""
         if "0103" not in hex_response:
             return []
-            
+
         try:
             _, payload = hex_response.split("0103", 1)
-            payload = payload[2:]  # Remove split residue
-            
+            payload = payload[2:]
+
             chunk_size = 16 if index == 2 else 8
             if len(payload) % chunk_size != 0:
-                print(f"[!] Invalid payload length {len(payload)}")
+                logging.warning(f"[!] Invalid payload length {len(payload)}")
                 return []
-            
-            chunks = [payload[i:i+chunk_size] 
-                     for i in range(0, len(payload), chunk_size)]
-            
+
+            chunks = [payload[i : i + chunk_size] for i in range(0, len(payload), chunk_size)]
+
             converted_values = []
             for chunk in chunks:
                 try:
-                    value = struct.unpack('!f' if chunk_size == 8 else '!q', 
-                                        bytes.fromhex(chunk))[0]
+                    value = struct.unpack("!f" if chunk_size == 8 else "!q", bytes.fromhex(chunk))[0]
                     converted_values.append(float(value))
                 except (struct.error, ValueError) as e:
-                    print(f"[!] Data unpacking error: {e}")
-            
-            return converted_values
-            
-        except Exception as e:
-            print(f"[!] Processing error: {e}")
-            return []
+                    logging.warning(f"[!] Data unpacking error: {e}")
 
+            return converted_values
+
+        except Exception as e:
+            logging.warning(f"[!] Processing error: {e}")
+            return []
 
     def handle_client(self, client_socket: socket.socket, addr: Tuple[str, int]) -> None:
         """Handles a single client connection."""
@@ -161,21 +168,18 @@ class TCPSocketServer:
                     logging.info(f"[←] Heartbeat received from {client_id}: {data}")
 
                     if data == self.heartbeat_packet:
-                        # Get next response packet atomically
                         with self.cycle_lock:
                             index, response_packet = next(self.response_cycle)
 
-                        # Send response
                         logging.info(f"[→] Sending response #{index} to {client_id}")
                         client_socket.sendall(response_packet)
 
-                        # Wait for client response
                         try:
                             response = client_socket.recv(RECV_BUFFER_SIZE)
                             if not response:
                                 logging.warning(f"[-] Client {client_id} disconnected after response")
                                 break
-                            
+
                             hex_response = response.hex().upper()
                             logging.info(f"[←] Response from {client_id}: {hex_response}")
                             values = self._process_response(index, hex_response)
@@ -186,7 +190,7 @@ class TCPSocketServer:
                                     accumulated_data = {}
 
                         except (socket.timeout, socket.error):
-                            logging.warning(f"[!] Timeout waiting for response  from {client_id}")
+                            logging.warning(f"[!] Timeout waiting for response from {client_id}")
                             break
                     else:
                         logging.warning(f"[!] Unrecognized packet from {client_id}: {data}")
@@ -213,7 +217,7 @@ class TCPSocketServer:
                     threading.Thread(
                         target=self.handle_client,
                         args=(client_socket, addr),
-                        daemon=True
+                        daemon=True,
                     ).start()
             except KeyboardInterrupt:
                 logging.info("\n[*] Server shutdown requested. Exiting gracefully...")
@@ -221,6 +225,14 @@ class TCPSocketServer:
                 logging.exception(f"[!] Server error: {e}")
 
 
-if __name__ == "__main__":
-    server = TCPSocketServer()
+def main() -> None:
+    try:
+        server = TCPSocketServer()
+    except RuntimeError as exc:
+        logging.critical(str(exc))
+        sys.exit(1)
     server.start_server()
+
+
+if __name__ == "__main__":
+    main()

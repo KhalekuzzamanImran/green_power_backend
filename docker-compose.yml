@@ -83,7 +83,7 @@ services:
     mqtt_broker:
         build: .
         container_name: green_power_mqtt_subscriber
-        entrypoint: ["python", "mqtt_broker/subscriber.py"]
+        entrypoint: ["python", "services/mqtt/mqtt_subscriber.py"]
         depends_on:
             - green_power_backend
         environment:
@@ -98,7 +98,7 @@ services:
     tcp_socket_server:
         build: .
         container_name: green_power_solar_server
-        entrypoint: ["python", "solar/tcp_socket_server/server.py"]
+        entrypoint: ["python", "services/tcp/tcp_socket_server.py"]
         depends_on:
             - green_power_backend
         ports:

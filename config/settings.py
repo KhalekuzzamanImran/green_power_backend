@@ -45,13 +45,28 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'channels',
+    'rest_framework',
+    'drf_spectacular',
 
-    'grid.apps.GridConfig',
-    'generator',
-    'environment',
-    'realtime',
-    'solar',
+    'apps.grid.apps.GridConfig',
+    'apps.generator.apps.GeneratorConfig',
+    'apps.environment.apps.EnvironmentConfig',
+    'apps.realtime.apps.RealtimeConfig',
+    'apps.solar.apps.SolarConfig',
+    'apps.ingestion.apps.IngestionConfig',
+    'apps.api.apps.ApiConfig',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Green Power API',
+    'DESCRIPTION': 'REST API for environment, generator, grid, and solar data with time filters and aggregation.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -63,7 +78,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'green_power_backend.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -80,9 +95,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'green_power_backend.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
-ASGI_APPLICATION = 'green_power_backend.asgi.application'
+ASGI_APPLICATION = 'config.asgi.application'
 
 # Channels Layer config (using Redis)
 CHANNEL_LAYERS = {
@@ -146,6 +161,20 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Allow Django to trust the proxy headers
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = None  # disable HTTPS redirect in dev
+
+# Update DRF Spectacular Swagger docs
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Green Power API',
+    'DESCRIPTION': 'REST API for environment, generator, grid, and solar data with time filters and aggregation.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SERVE_PUBLIC': True,
+    'BASE_URL': 'http://127.0.0.1:8010',  # fixes absolute URL for Swagger docs
+}
 
 
 # Internationalization
@@ -265,7 +294,7 @@ LOGGING = {
         },
 
         # Project app-level loggers
-        'green_power_backend': {
+        'config': {
             'handlers': ['console', 'info_file', 'error_file'],
             'level': 'DEBUG',
             'propagate': False,
@@ -284,5 +313,3 @@ LOGGING = {
         },
     },
 }
-
-

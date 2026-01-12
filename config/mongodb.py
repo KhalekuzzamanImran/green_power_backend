@@ -40,6 +40,13 @@ class MongoDBClient:
         if cls._db is None:
             cls.connect()
         return cls._db
+
+    @classmethod
+    def require_db(cls):
+        db = cls.get_db()
+        if db is None:
+            raise RuntimeError("MongoDB connection unavailable.")
+        return db
     
     @classmethod
     def reconnect(cls):
@@ -47,4 +54,3 @@ class MongoDBClient:
         cls._client = None
         cls._db = None
         return cls.connect()
-

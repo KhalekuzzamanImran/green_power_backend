@@ -18,5 +18,6 @@ class GeneratorDataModel(BaseModel):
 
     @classmethod
     def from_flat_dict(cls, data: Dict[Union[int, str], Union[int, float, str]]):
-        ts = data.pop("timestamp", None)
-        return cls(timestamp=ts, payload=GeneratorPayload(data))
+        ts = data.get("timestamp")
+        payload = {k: v for k, v in data.items() if k != "timestamp"}
+        return cls(timestamp=ts, payload=GeneratorPayload(payload))
