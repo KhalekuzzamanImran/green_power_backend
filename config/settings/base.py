@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 from dotenv import load_dotenv
 import os
 import logging
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework',
     'drf_spectacular',
+    'rest_framework_simplejwt.token_blacklist',
 
     'apps.grid.apps.GridConfig',
     'apps.generator.apps.GeneratorConfig',
@@ -68,6 +70,14 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+        'apps.api.permissions.RoleRequired',
+    ),
 }
 
 SPECTACULAR_SETTINGS = {
@@ -75,6 +85,16 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'REST API for environment, generator, grid, and solar data with time filters and aggregation.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
+    'SECURITY': [{'BearerAuth': []}],
+    'COMPONENTS': {
+        'securitySchemes': {
+            'BearerAuth': {
+                'type': 'http',
+                'scheme': 'bearer',
+                'bearerFormat': 'JWT',
+            }
+        }
+    },
 }
 
 MIDDLEWARE = [
@@ -197,6 +217,18 @@ USE_TZ = True
 USE_X_FORWARDED_HOST = True
 USE_X_FORWARDED_PORT = True
 SECURE_SSL_REDIRECT = False
+
+# RBAC defaults
+API_DEFAULT_ROLES = ("admin", "user")
+
+# JWT configuration
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=int(os.getenv('JWT_ACCESS_MINUTES', '15'))),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=int(os.getenv('JWT_REFRESH_DAYS', '7'))),
+    'ROTATE_REFRESH_TOKENS': os.getenv('JWT_ROTATE_REFRESH', 'true').lower() in ('true', '1', 'yes'),
+    'BLACKLIST_AFTER_ROTATION': os.getenv('JWT_BLACKLIST_AFTER_ROTATION', 'true').lower() in ('true', '1', 'yes'),
+    'UPDATE_LAST_LOGIN': False,
+}
 
 
 # Static files (CSS, JavaScript, Images)

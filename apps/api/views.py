@@ -4,10 +4,12 @@ from typing import Any, Dict
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from rest_framework.permissions import IsAuthenticated
 from drf_spectacular.utils import OpenApiParameter, OpenApiTypes, extend_schema
 
 from config.mongodb import MongoDBClient
 from .utils import aggregate_docs, get_time_range, serialize_docs
+from .permissions import RoleRequired
 
 
 DEFAULT_LIMIT = 500
@@ -29,6 +31,8 @@ class BaseMongoView(APIView):
     timestamp_field = "timestamp"
     timestamp_is_epoch_ms = False
     exclude_keys = {"_id", "timestamp", "time", "isend", "device_id", "timestamp_iso"}
+    permission_classes = [IsAuthenticated, RoleRequired]
+    required_roles = ("admin", "user")
 
     @extend_schema(
         parameters=[

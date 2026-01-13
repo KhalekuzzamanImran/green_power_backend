@@ -13,6 +13,7 @@ daphne==4.2.1
 distlib==0.3.8
 Django==5.2.3
 djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
 django-rest-framework-mongoengine==3.4.1
 drf-spectacular==0.27.2
 dnspython==2.7.0
