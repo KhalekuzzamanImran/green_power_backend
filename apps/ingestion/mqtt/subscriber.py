@@ -1,9 +1,9 @@
-import os
-import sys
-import json
 import logging
+import json
+import os
 import time
 import signal
+import sys
 import threading
 import django
 from pathlib import Path
@@ -21,7 +21,7 @@ from django.apps import apps
 load_dotenv()
 
 # ─────── log Setup ───────
-log = logging.getLogger("subscriber")
+log = logging.getLogger(__name__)
 
 # Fallback for standalone script runs
 if not log.hasHandlers():
@@ -36,8 +36,8 @@ def setup_django() -> None:
         return
 
     base_dir = Path(__file__).resolve().parent.parent.parent.parent
-    sys.path.append(str(base_dir))
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.base")
+    sys.path.insert(0, str(base_dir))
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 
     try:
         django.setup()
@@ -58,6 +58,7 @@ DEFAULT_RECONNECT_DELAY = 1
 MAX_RECONNECT_DELAY = 60
 QUEUE_TIMEOUT = 1
 QUEUE_MAX_SIZE = 1000
+REQUIRED_FIELD_KEYS: Dict[type, List[tuple[str, set[str]]]] = {}
 
 TOPIC_MAPPING = {
     "MQTT_RT_DATA": (RTDataModel, "grid_rt_data"),
@@ -69,6 +70,31 @@ GEN_TOPIC = "CCCL/PURBACHAL/ENM_01"
 GEN_COLLECTION = "generator_data"
 ENV_COLLECTION = "environment_data"
 REALTIME_GROUP = "realtime_updates"
+
+
+def _build_required_field_keys(model_class: type) -> List[tuple[str, set[str]]]:
+    required: List[tuple[str, set[str]]] = []
+    for field_name, field_info in model_class.model_fields.items():
+        if not field_info.is_required():
+            continue
+        keys = {field_name}
+        alias = field_info.alias
+        if alias:
+            keys.add(alias)
+        validation_alias = getattr(field_info, "validation_alias", None)
+        if isinstance(validation_alias, str):
+            keys.add(validation_alias)
+        required.append((field_name, keys))
+    return required
+
+
+def _missing_required_fields(model_class: type, payload: Dict[str, Any]) -> List[str]:
+    required = REQUIRED_FIELD_KEYS.get(model_class)
+    if required is None:
+        required = _build_required_field_keys(model_class)
+        REQUIRED_FIELD_KEYS[model_class] = required
+    payload_keys = set(payload.keys())
+    return [field_name for field_name, keys in required if not keys & payload_keys]
 
 
 # ─────── MQTT Configuration ───────
@@ -84,9 +110,6 @@ class MQTTConfig:
         self.password: str = os.getenv("MQTT_PASSWORD")
         self.keepalive: int = int(os.getenv("MQTT_KEEPALIVE", 60))
         self.topics: List[str] = self._parse_topics(os.getenv("MQTT_TOPICS", "[]"))
-        if os.getenv("DJANGO_SETTINGS_MODULE", "").endswith(".base"):
-            self.broker = os.getenv("MQTT_BROKER_DOCKER", self.broker)
-            self.port = int(os.getenv("MQTT_PORT_DOCKER", self.port))
 
     def _parse_topics(self, topics_str: str) -> List[str]:
         """
@@ -234,7 +257,13 @@ class MQTTSubscriber:
             timestamp = data_point.get("tp")
             if timestamp is None:
                 return
-            points = {str(p["id"]): p["val"] for p in data_point.get("point", [])}
+            points: Dict[str, Any] = {}
+            for point in data_point.get("point", []):
+                if not isinstance(point, dict):
+                    continue
+                if "id" not in point or "val" not in point:
+                    continue
+                points[str(point["id"])] = point["val"]
             doc = {"timestamp": timestamp, **points}
 
             if session.get("timestamp") == timestamp:
@@ -270,6 +299,14 @@ class MQTTSubscriber:
             try:
                 session["device_id"] = session.pop("id", None)
                 session["timestamp"] = datetime.now(timezone.utc)
+                missing = _missing_required_fields(model_class, session)
+                if missing:
+                    preview = ", ".join(missing[:5])
+                    extra = len(missing) - 5
+                    if extra > 0:
+                        preview = f"{preview} (+{extra} more)"
+                    log.warning(f"{topic} missing required fields: {preview}")
+                    return
                 validated = model_class(**session)
                 self.collections[collection].insert_one(session.copy())
                 log.info(f"{topic} inserted into MongoDB.")
@@ -295,15 +332,21 @@ class MQTTSubscriber:
         while True:
             try:
                 topic, payload = self.message_queue.get(timeout=QUEUE_TIMEOUT)
-                self._handle_message(topic, payload)
-                self.message_queue.task_done()
             except Empty:
                 continue
             except Exception as e:
                 log.error(f"Queue processing error: {e}")
+                continue
+            try:
+                self._handle_message(topic, payload)
+            except Exception as e:
+                log.error(f"Queue processing error: {e}")
+            finally:
+                self.message_queue.task_done()
 
     def connect(self):
         try:
+            log.info(f"Connecting to MQTT broker at {self.config.broker}:{self.config.port}")
             self.client.connect_async(self.config.broker, self.config.port, self.config.keepalive)
             self.client.loop_start()
             threading.Thread(target=self._process_queue, daemon=True).start()

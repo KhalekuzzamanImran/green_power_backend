@@ -50,7 +50,7 @@ services:
             SECRET_KEY: ${SECRET_KEY}
             DEBUG: ${DEBUG}
             ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-            DJANGO_SETTINGS_MODULE: config.settings.prod
+            DJANGO_SETTINGS_MODULE: config.settings
         env_file:
             - ../.env
         volumes:
@@ -95,7 +95,7 @@ services:
             SECRET_KEY: ${SECRET_KEY}
             DEBUG: ${DEBUG}
             ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-            DJANGO_SETTINGS_MODULE: config.settings.prod
+            DJANGO_SETTINGS_MODULE: config.settings
         env_file:
             - ../.env
         extra_hosts:
@@ -118,7 +118,7 @@ services:
             SECRET_KEY: ${SECRET_KEY}
             DEBUG: ${DEBUG}
             ALLOWED_HOSTS: ${ALLOWED_HOSTS}
-            DJANGO_SETTINGS_MODULE: config.settings.prod
+            DJANGO_SETTINGS_MODULE: config.settings
         env_file:
             - ../.env
         networks:

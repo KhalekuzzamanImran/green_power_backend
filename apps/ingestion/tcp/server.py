@@ -24,7 +24,7 @@ RESPONSE_PACKETS: List[bytes] = [
 RECV_BUFFER_SIZE: int = 1024
 CLIENT_TIMEOUT: int = 120  # seconds
 
-log = logging.getLogger("subscriber")
+log = logging.getLogger(__name__)
 if not log.hasHandlers():
     logging.basicConfig(
         level=logging.INFO,
@@ -39,7 +39,7 @@ def setup_django() -> None:
 
     base_dir = Path(__file__).resolve().parent.parent.parent.parent
     sys.path.insert(0, str(base_dir))
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.base")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 
     try:
         django.setup()

@@ -20,7 +20,7 @@ import logging
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -129,11 +129,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 ASGI_APPLICATION = 'config.asgi.application'
 
 # Channels Layer config (using Redis)
+REDIS_HOST = os.getenv("REDIS_HOST_DOCKER") or os.getenv("REDIS_HOST", "127.0.0.1")
+REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [(os.getenv('REDIS_HOST', '127.0.0.1'), int(os.getenv('REDIS_PORT', 6379)))]
+            'hosts': [(REDIS_HOST, REDIS_PORT)]
         }
     }
 }
@@ -350,6 +353,11 @@ LOGGING = {
         },
         'subscriber': {
             'handlers': ['console', 'subscriber_error_file'],
+            'level': SUBSCRIBER_LOG_LEVEL,
+            'propagate': False,
+        },
+        'apps.ingestion.mqtt.subscriber': {
+            'handlers': ['console', 'info_file', 'subscriber_error_file'],
             'level': SUBSCRIBER_LOG_LEVEL,
             'propagate': False,
         },

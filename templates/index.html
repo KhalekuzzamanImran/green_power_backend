@@ -11,12 +11,31 @@
 
     <script>
       console.log("Connecting to WebSocket...");
+      const params = new URLSearchParams(window.location.search);
+      const token =
+        params.get("token") ||
+        localStorage.getItem("access_token") ||
+        localStorage.getItem("token");
       const ws_scheme = window.location.protocol === "https" ? "wss" : "ws";
 
-      const ws = new WebSocket(
-        `${ws_scheme}://${window.location.host}/ws/realtime/`
-      );
+      const wsUrl = token
+        ? `${ws_scheme}://${window.location.host}/ws/realtime/?token=${encodeURIComponent(
+            token
+          )}`
+        : `${ws_scheme}://${window.location.host}/ws/realtime/`;
+
+      if (!token) {
+        document.getElementById("total-current").textContent =
+          "Auth token missing";
+      }
+
+      const ws = new WebSocket(wsUrl);
       ws.onopen = () => console.log("WebSocket connection established.");
+      ws.onclose = () => {
+        if (!token) {
+          console.warn("WebSocket closed: missing auth token.");
+        }
+      };
 
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);

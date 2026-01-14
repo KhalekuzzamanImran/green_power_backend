@@ -1,6 +1,8 @@
-from pymongo import MongoClient, errors, IndexModel, ASCENDING, DESCENDING
-from django.conf import settings
 import logging
+from typing import Optional
+
+from django.conf import settings
+from pymongo import MongoClient, errors, IndexModel, ASCENDING, DESCENDING
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +33,7 @@ DEFAULT_INDEXES = {
 
 
 class MongoDBClient:
-    _client = None
+    _client: Optional[MongoClient] = None
     _db = None
     _indexes_ready = False
 
@@ -39,7 +41,7 @@ class MongoDBClient:
     def connect(cls):
         if cls._client and cls._db:
             return cls._db  # Already connected
-        
+
         try:
             mongo_uri = getattr(settings, 'MONGO_DB_URI')
             db_name = getattr(settings, 'MONGO_DB_NAME')
