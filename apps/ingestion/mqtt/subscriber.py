@@ -37,7 +37,7 @@ def setup_django() -> None:
 
     base_dir = Path(__file__).resolve().parent.parent.parent.parent
     sys.path.append(str(base_dir))
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.dev")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.base")
 
     try:
         django.setup()
@@ -84,7 +84,7 @@ class MQTTConfig:
         self.password: str = os.getenv("MQTT_PASSWORD")
         self.keepalive: int = int(os.getenv("MQTT_KEEPALIVE", 60))
         self.topics: List[str] = self._parse_topics(os.getenv("MQTT_TOPICS", "[]"))
-        if os.getenv("DJANGO_SETTINGS_MODULE", "").endswith(".prod"):
+        if os.getenv("DJANGO_SETTINGS_MODULE", "").endswith(".base"):
             self.broker = os.getenv("MQTT_BROKER_DOCKER", self.broker)
             self.port = int(os.getenv("MQTT_PORT_DOCKER", self.port))
 

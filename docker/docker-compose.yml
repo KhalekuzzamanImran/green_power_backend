@@ -3,9 +3,9 @@ services:
         image: postgres:17
         container_name: green_power_postgres
         environment:
-            POSTGRES_DB: ${POSTGRES_DB}
-            POSTGRES_USER: ${POSTGRES_USER}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB_NAME}
+            POSTGRES_USER: ${POSTGRES_DB_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_DB_PASSWORD}
         env_file:
             - ../.env
         ports:
@@ -21,12 +21,12 @@ services:
         volumes:
             - green_power_mongo_data:/data/db
         ports:
-            - "27018:27017"
+            - "27017:27017"
         environment:
             # Create a root user in admin database
-            MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
-            MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
-            MONGO_INITDB_DATABASE: ${MONGODB_NAME}
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_DB_USER}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_DB_PASSWORD}
+            MONGO_INITDB_DATABASE: ${MONGO_DB_NAME}
         healthcheck:
             test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/green_power --quiet
             interval: 10s
